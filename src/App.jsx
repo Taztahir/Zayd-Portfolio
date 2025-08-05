@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function App(){
   return(
     <div  className='selection:bg-[#E68200] selection:text-white'>
-      <div className='items-center'>
-        <div id='spinner' className='fixed flex justify-center items-center inset-0'>
+      <div className=''>
+        <div id='spinner' className='fixed flex justify-center items-center inset-0 w-full h-full z-[9999] bg-white'>
           <img src={load} alt="" />
         </div>
       </div>
