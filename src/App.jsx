@@ -3,20 +3,19 @@ import Header from './Header';
 import About from './About'
 import load from './assets/loader.gif';
 
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const spinner = document.getElementById("spinner");
     const content = document.getElementById("content");
 
-    // Wait 2 seconds before starting fade-out
+    // Show spinner for 2 seconds minimum
     setTimeout(() => {
       spinner.style.opacity = "0";
 
-      // Hide after fade-out animation
       setTimeout(() => {
         spinner.style.display = "none";
         content.classList.remove("hidden");
-      }, 500); // Matches fade duration
-    }, 2000); // 2 seconds delay
+      }, 500); // fade-out duration
+    }, 2000);
   });
 
 function App(){
