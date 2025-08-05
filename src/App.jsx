@@ -27,7 +27,7 @@ function App(){
           <img src={load} alt="" />
         </div>
       </div>
-      <div id='content' className='hidden'>
+      <div id='content' className='sm:hidden'>
         <Header/>
         <About/>
       </div>
