@@ -4,7 +4,7 @@ import './App.css'
 function Header(){
     return(
         <header className='Header '>
-            <div className='bg-[#FF9000]/90 text-center md:space-y-8 space-y-10 md:py-16 lg:py-20 py-40'>
+            <div className='bg-[#FF9000]/90 text-center md:space-y-8 space-y-10 md:py-16 lg:py-20 py-32'>
                 {/* Profile Image  */}
                 <div className='flex justify-center items-center'>
                     <img src={Profile} alt=""  className='rounded-full size-52'/>
@@ -22,21 +22,30 @@ function Header(){
                     {/* Multimedia */}
                     <div className='flex justify-center gap-3'>
                         {/* Twitter */}
-                        <div>
-                            <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-twitter"></ion-icon>
-                        </div>
+                        <a href="https://x.com/taz1393177" target='_blank'>
+                            <div>
+                                <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-twitter" ></ion-icon>
+                            </div>
+                        </a>
                         {/* github  */}
-                        <div>
-                            <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-github"></ion-icon>
-                        </div>
+                        <a href="https://github.com/Taztahir?tab=repositories" target='_blank'>
+                            <div>
+                                <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-github"></ion-icon>
+                            </div>
+                        </a>
                         {/* whatapp  */}
-                        <div>
-                            <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-whatsapp"></ion-icon>
-                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=%2B2347041253351&text&type=phone_number&app_absent=0" target='_blank'>
+                            <div>
+                                <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-whatsapp"></ion-icon>
+                            </div>
+                        </a>                    
                         {/* instagram  */}
-                        <div>
-                            <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-instagram"></ion-icon>
-                        </div>
+                        <a href="" target='_blank'>
+                            <div>
+                                <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-instagram"></ion-icon>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </div>

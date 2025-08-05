@@ -21,18 +21,10 @@ import load from './assets/loader.gif';
 
 function App(){
   return(
-    <div >
-      {/* <div className='selection:bg-[#E68200] selection:text-white'>
-        <div id='spinner' className='fixed flex justify-center items-center inset-0 '>
-          <img src={load} alt="" />
-        </div>
-      </div> */}
-      {/* <div id='content' className='hidden'> */}
+      <div className='selection:bg-[#E68200] selection:text-white'>
         <Header/>
         <About/>
-      {/* </div> */}
-      
-    </div>
+      </div>
   )
 }
 export default App;
