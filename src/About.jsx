@@ -2,10 +2,10 @@ import './App.css'
 
 function About(){
     return(
-        <section className='bg-white syne-mono-regular space-y-20 lg:py-10 py-20 '>
+        <section className='bg-white comic-neue-regular space-y-20 lg:py-10 py-20 '>
             <div>
                 {/* About me  */}
-                <h1 className='text-5xl text-[#000000] text-center space-mono-regular'>About Me</h1>
+                <h1 className='text-5xl text-[#000000] text-center comic-neue-regular'>About Me</h1>
             </div>
             <div className='lg:flex gap-10 lg:max-w-5xl md:mx-auto md:max-w-3xl sm:mx-10 mx-5 max-lg:space-y-5'>
                 <div className='flex md:gap-10 sm:gap-5 '>
@@ -57,11 +57,11 @@ function About(){
             </div>
             {/* full details  */}
             <div className='space-y-5'>
-                <h1 className='text-4xl space-mono-regular'>Hello There!</h1>
-                <p className='sm:text-xl text-sm'>
-                    I’m <b>Tahir Zayd</b> , a passionate web developer who loves turning ideas into interactive and visually appealing digital experiences. I specialize in creating modern, responsive, and user‑friendly websites that work seamlessly across all devices. My journey in web development has been driven by curiosity, continuous learning, and a desire to craft solutions that are both functional and beautiful.
+                <h1 className='text-4xl '>Hello There!</h1>
+                <p className='sm:text-xl text-sm comic-neue-regular'>
+                    I’m <b>Tahir Zayd</b> , a passionate web developer who loves turning ideas into interactive and visually appealing digital experiences. I specialize in creating modern, responsive, and user‑friendly websites that work seamlessly across all devices.
                 </p>
-                <p className='sm:text-xl text-sm'>
+                <p className='sm:text-xl text-sm comic-neue-regular'>
                     I work with <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>React</b>, and <b>Tailwind CSS</b>, and I am currently expanding my skills by studying React Native to build high‑quality mobile applications. Every project is an opportunity to improve my craft, solve problems, and create something meaningful for people to use and enjoy.
                 </p>
                 {/* Multimedia */}

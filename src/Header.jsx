@@ -4,7 +4,7 @@ import './App.css'
 function Header(){
     return(
         <header className='Header '>
-            <div className='bg-[#FF9000]/90 text-center md:space-y-8 space-y-10 md:py-16 lg:py-20 py-32'>
+            <div className='bg-[#FF9000]/90 text-center md:space-y-8 space-y-10 md:py-85 lg:py-16 py-32'>
                 {/* Profile Image  */}
                 <div className='flex justify-center items-center'>
                     <img src={Profile} alt=""  className='rounded-full size-52'/>
@@ -20,7 +20,7 @@ function Header(){
                         <span className='space-mono-regular text-white '>Web developer / Frontend Tutor</span>
                     </div>
                     {/* Multimedia */}
-                    <div className='flex justify-center gap-3'>
+                    <div className='flex justify-center gap-5'>
                         {/* Twitter */}
                         <a href="https://x.com/taz1393177" target='_blank'>
                             <div>
@@ -34,7 +34,7 @@ function Header(){
                             </div>
                         </a>
                         {/* whatapp  */}
-                        <a href="https://api.whatsapp.com/send/?phone=%2B2347041253351&text&type=phone_number&app_absent=0" target='_blank'>
+                        <a href="https://api.whatsapp.com/send/?phone=%2B2349060720810&text&type=phone_number&app_absent=0" target='_blank'>
                             <div>
                                 <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-whatsapp"></ion-icon>
                             </div>

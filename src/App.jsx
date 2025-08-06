@@ -19,6 +19,8 @@ import load from './assets/loader.gif';
 //     }, 2000); // 2 seconds delay
 //   });
 
+
+
 function App(){
   return(
       <div className='selection:bg-[#E68200] selection:text-white'>
