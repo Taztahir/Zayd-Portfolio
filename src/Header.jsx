@@ -1,4 +1,4 @@
-import Profile from './assets/user-3.jpg'
+import Profile from './assets/profile.svg'
 import './App.css'
 
 function Header(){
