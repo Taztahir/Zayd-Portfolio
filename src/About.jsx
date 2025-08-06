@@ -47,7 +47,7 @@ function About(){
                     </div>
                     {/* website  */}
                     <div>
-                        <span><a href="">www.yoursite.com</a></span>
+                        <span><a href="">https://zayd-portfolio.vercel.app</a></span>
                     </div>
                     {/* address  */}
                     <div>
