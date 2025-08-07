@@ -46,8 +46,8 @@ export default function ResumeTimeline() {
   return (
     <section className="bg-white py-16 px-4 overflow-hidden">
       <h1 className="text-5xl text-[#000000] text-center mb-16 comic-neue-regular">My Resume</h1>
-        <div className="text-center comic-neue-bold bg-gray-200 max-w-3xs mx-auto py-1">Work Experience</div>
-      <div className="relative max-w-screen-xl mx-auto">
+        <div className="text-center comic-neue-bold bg-gray-200 max-w-28 mx-auto py-1">Experience</div>
+      <div className="relative max-w-screen-xl mx-auto max-md:hidden">
         {/* Vertical center line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-200 hidden md:block"></div>
 
@@ -93,6 +93,9 @@ export default function ResumeTimeline() {
             </motion.div>
           );
         })}
+      </div>
+      <div>
+
       </div>
     </section>
   );
