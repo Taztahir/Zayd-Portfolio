@@ -40,11 +40,11 @@ function Header(){
                             </div>
                         </a>                    
                         {/* instagram  */}
-                        <a href="" target='_blank'>
+                        {/* <a href="" target='_blank'>
                             <div>
                                 <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-instagram"></ion-icon>
                             </div>
-                        </a>
+                        </a> */}
 
                     </div>
                 </div>
