@@ -17,7 +17,7 @@ const experiences = [
     company: "Gravity Lab",
     date: "January 2025 - Current",
     description:
-      "Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast.",
+      "Collaborated with a team of developers to build responsive user interfaces using React.js and Tailwind CSS. Gained practical experience working with REST APIs, Git version control, and debugging tools. Improved code quality through regular reviews and learned agile development practices in a real-world environment.",
     side: "right",
   },
   {
@@ -25,7 +25,7 @@ const experiences = [
     company: "Dervac HUB",
     date: "June 2025 - August 2025",
     description:
-      "Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast.",
+      "Guided beginners at YABATECH Secondary school through the fundamentals of frontend development, including HTML, CSS, JavaScript, and Tailwind CSS. Created learning materials, offered one-on-one support, and helped students build real-world projects. Improved my communication skills and deepened my understanding of core frontend concepts through teaching.",
     side: "left",
   },
   {
@@ -33,7 +33,7 @@ const experiences = [
     company: "Freelancer",
     date: "August 2025 - Current",
     description:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      "Worked independently with clients to design and develop responsive, user-friendly web interfaces using React.js, Tailwind CSS, Bootstrap, and JavaScript. Translated client requirements into functional websites, implemented interactive components, and ensured mobile-first design and cross-browser compatibility. Utilized Git and GitHub for version control and project collaboration. Gained experience in project management, remote communication, and delivering high-quality work within deadlines.",
     side: "right",
   },
 ];
