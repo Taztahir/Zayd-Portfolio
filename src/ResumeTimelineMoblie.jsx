@@ -16,7 +16,7 @@ const experiences = [
     company: "Gravity Lab",
     date: "January 2025 - Current",
     description:
-      "Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast.",
+      "Collaborated with a team of developers to build responsive user interfaces using React.js and Tailwind CSS. Gained practical experience working with REST APIs, Git version control, and debugging tools. Improved code quality through regular reviews and learned agile development practices in a real-world environment.",
     side: "left",
   },
   {
@@ -24,7 +24,7 @@ const experiences = [
     company: "Dervac HUB",
     date: "June 2025 - August 2025",
     description:
-      "Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast.",
+      "Guided beginners at YABATECH Secondary school through the fundamentals of frontend development, including HTML, CSS, JavaScript, and Tailwind CSS. Created learning materials, offered one-on-one support, and helped students build real-world projects. Improved my communication skills and deepened my understanding of core frontend concepts through teaching.",
     side: "left",
   },
   {
@@ -32,8 +32,8 @@ const experiences = [
     company: "Freelancer",
     date: "August 2025 - Current",
     description:
-      "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    side: "left",
+      "Worked independently with clients to design and develop responsive, user-friendly web interfaces using React.js, Tailwind CSS, Bootstrap, and JavaScript. Translated client requirements into functional websites, implemented interactive components, and ensured mobile-first design and cross-browser compatibility. Utilized Git and GitHub for version control and project collaboration. Gained experience in project management, remote communication, and delivering high-quality work within deadlines.",
+    side: "",
   },
 ];
 
@@ -42,14 +42,14 @@ function ResumeTimelineMobile() {
     return(
         <div>
                 <h1 className="text-5xl text-[#000000] text-center mb-16 comic-neue-regular">My Resume</h1>
-                <div className="text-center comic-neue-bold bg-gray-200 w-24 mx-auto px-2 my-3 py-1">Experience</div>
+                <div className="text-center comic-neue-bold bg-gray-200 w-28 mx-auto px-2 my-3 py-1">Experience</div>
             {experiences.map((exp, index) => ( 
            <div key={index} className="md:hidden w- mx-5">
 
                 {/* work experience Mobile  */}
                 <div>
                     {/* experience  */}
-                    <div className="items-center flex flex-col justify-center text-center gap-10">
+                    <div className="items-center flex flex-col-reverse justify-center py-5 text-center gap-10">
                         {/* briefcase  */}
                         <div className="bg-orange-500 text-white p-4 rounded-full z-10 shadow-md w-14 mx-4 order-1 md:order-none">
                             <FaBriefcase size={24} />
