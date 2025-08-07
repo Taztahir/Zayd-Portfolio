@@ -40,7 +40,7 @@ const experiences = [
 
 function ResumeTimelineMobile() {
     return(
-        <div>
+        <div className="md:hidden">
                 <h1 className="text-5xl text-[#000000] text-center mb-16 comic-neue-regular">My Resume</h1>
                 <div className="text-center comic-neue-bold bg-gray-200 w-28 mx-auto px-2 my-3 py-1">Experience</div>
             {experiences.map((exp, index) => ( 
