@@ -1,7 +1,8 @@
 import './App.css';
 import Header from './Header';
 import About from './About'
-import load from './assets/loader.gif';
+import ResumeTimeline from './ResumeTimeline';
+// import load from './assets/loader.gif';
 
 // window.addEventListener("load", function () {
 //     const spinner = document.getElementById("spinner");
@@ -26,6 +27,7 @@ function App(){
       <div className='selection:bg-[#E68200] selection:text-white'>
         <Header/>
         <About/>
+        <ResumeTimeline/>
       </div>
   )
 }

@@ -44,7 +44,7 @@ function About(){
                     {/* email  */}
                     <div>
                         <span>taztaz162004@gmail.com</span>
-                    </div>
+                    </div>  
                     {/* website  */}
                     <div>
                         <span><a href="">https://zayd-portfolio.vercel.app</a></span>
@@ -67,21 +67,29 @@ function About(){
                 {/* Multimedia */}
                     <div className='flex gap-3'>
                         {/* Twitter */}
-                        <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
-                            <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-twitter"></ion-icon>
-                        </div>
+                        <a href="https://x.com/taz1393177" target='_blank'>
+                            <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
+                                <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-twitter"></ion-icon>
+                            </div>
+                        </a>
                         {/* github  */}
-                        <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
-                            <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-github"></ion-icon>
-                        </div>
+                        <a href="https://github.com/Taztahir?tab=repositories" target='_blank'>
+                            <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
+                                <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-github"></ion-icon>
+                            </div>
+                        </a>
                         {/* whatapp  */}
-                        <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
-                            <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-whatsapp"></ion-icon>
-                        </div>
+                        <a href="https://api.whatsapp.com/send/?phone=%2B2349060720810&text&type=phone_number&app_absent=0" target='_blank'>
+                            <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
+                                <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-whatsapp"></ion-icon>
+                            </div>
+                        </a>
                         {/* instagram  */}
-                        <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
-                            <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-instagram"></ion-icon>
-                        </div>
+                        <a href="">
+                            <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
+                                <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-instagram"></ion-icon>
+                            </div>
+                        </a>
                     </div>
             </div>
 
