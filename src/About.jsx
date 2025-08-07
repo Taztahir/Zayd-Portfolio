@@ -5,7 +5,7 @@ function About(){
         <section className='bg-white comic-neue-regular space-y-20 lg:py-10 py-20 '>
             <div>
                 {/* About me  */}
-                <h1 className='text-5xl text-[#000000] text-center comic-neue-regular'>About Me</h1>
+                <h1 className='text-5xl ? text-center comic-neue-regular'>About Me</h1>
             </div>
             <div className='lg:flex gap-10 lg:max-w-5xl md:mx-auto md:max-w-3xl sm:mx-10 mx-5 max-lg:space-y-5'>
                 <div className='flex md:gap-10 sm:gap-5 '>

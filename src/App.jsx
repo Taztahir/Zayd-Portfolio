@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Header';
 import About from './About'
 import ResumeTimeline from './ResumeTimeline';
+import ResumeTimelineMobile from './ResumeTimelineMoblie';
 // import load from './assets/loader.gif';
 
 // window.addEventListener("load", function () {
@@ -28,6 +29,7 @@ function App(){
         <Header/>
         <About/>
         <ResumeTimeline/>
+        <ResumeTimelineMobile/>
       </div>
   )
 }
