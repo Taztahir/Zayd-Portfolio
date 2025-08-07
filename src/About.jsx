@@ -85,11 +85,11 @@ function About(){
                             </div>
                         </a>
                         {/* instagram  */}
-                        <a href="">
+                        {/* <a href="">
                             <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
                                 <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-instagram"></ion-icon>
                             </div>
-                        </a>
+                        </a> */}
                     </div>
             </div>
 
