@@ -51,7 +51,7 @@ function ResumeTimelineMobile() {
                     {/* experience  */}
                     <div className="items-center flex flex-col-reverse justify-center py-5 text-center gap-10">
                         {/* briefcase  */}
-                        <div className="bg-orange-500 text-white p-4 rounded-full z-10 shadow-md w-14 mx-4 order-1 md:order-none">
+                        <div className="bg-[#FF9000] text-white p-4 rounded-full z-10 shadow-md w-14 mx-4 order-1 md:order-none">
                             <FaBriefcase size={24} />
                         </div>
                         {/* Text  */}

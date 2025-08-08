@@ -75,7 +75,7 @@ export default function ResumeTimeline() {
             >
               {/* Icon on left if right-side entry */}
               {!isLeft && (
-                <div className="bg-orange-500 text-white p-4 rounded-full z-10 shadow-md mx-4 order-1 md:order-none">
+                <div className="bg-[#FF9000] text-white p-4 rounded-full z-10 shadow-md mx-4 order-1 md:order-none">
                   <FaBriefcase size={24} />
                 </div>
               )}
@@ -94,7 +94,7 @@ export default function ResumeTimeline() {
 
               {/* Icon on right if left-side entry */}
               {isLeft && (
-                <div className="bg-orange-500 text-white p-4 rounded-full z-10 shadow-md mx-4">
+                <div className="bg-[#FF9000] text-white p-4 rounded-full z-10 shadow-md mx-4">
                   <FaBriefcase size={24} />
                 </div>
               )}

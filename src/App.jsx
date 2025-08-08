@@ -3,6 +3,7 @@ import Header from './Header';
 import About from './About'
 import ResumeTimeline from './ResumeTimeline';
 import ResumeTimelineMobile from './ResumeTimelineMoblie';
+import MyService from './MyService';
 // import load from './assets/loader.gif';
 
 // window.addEventListener("load", function () {
@@ -30,6 +31,7 @@ function App(){
         <About/>
         <ResumeTimeline/>
         <ResumeTimelineMobile/>
+        <MyService/>
       </div>
   )
 }
