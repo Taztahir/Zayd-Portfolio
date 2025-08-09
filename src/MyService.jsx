@@ -6,7 +6,7 @@ function MyService(){
     return(
         <div className="bg-[#FF9000] py-10">
             <h1 className="text-white  comic-neue-bold text-5xl text-center">My Service</h1>
-                    <div className="text-center grid lg:grid-cols-3 max-w-6xl lg:mx-auto py-10 gap-5 max-sm:mx-10 max-md:mx-20">
+                    <div className="text-center grid lg:grid-cols-3 max-w-6xl lg:mx-auto py-10 gap-5 max-sm:mx-5 max-md:mx-20">
                         <div className="flex flex-col gap-5 items-center">
                             <div className="bg-white w-24 rounded-full py-4 px-3">
                                 <ion-icon className="text-[#ff9000] text-6xl " name="bar-chart-outline"></ion-icon>
@@ -20,7 +20,7 @@ function MyService(){
                         </div>
                         <div className="flex flex-col gap-5 items-center">
                             <div className="bg-white w-24 rounded-full py-4 px-3">
-                                <ion-icon className="text-[#ff9000] text-6xl " name="bar-chart-outline"></ion-icon>
+                                <ion-icon className="text-[#ff9000] text-6xl " name="pencil-outline"></ion-icon>
                             </div>
                             <div className="space-y-2">
                                 <h1 className="text-white text-2xl comic-neue-bold">Tutor</h1>
@@ -31,7 +31,7 @@ function MyService(){
                         </div>
                         <div className="flex flex-col gap-5 items-center">
                             <div className="bg-white w-24 rounded-full py-4 px-3">
-                                <ion-icon className="text-[#ff9000] text-6xl " name="bar-chart-outline"></ion-icon>
+                                <ion-icon className="text-[#ff9000] text-6xl " name="people-outline"></ion-icon>
                             </div>
                             <div className="space-y-2">
                                 <h1 className="text-white text-2xl comic-neue-bold">Support</h1>
