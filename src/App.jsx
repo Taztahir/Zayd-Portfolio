@@ -4,6 +4,7 @@ import About from './About'
 import ResumeTimeline from './ResumeTimeline';
 import ResumeTimelineMobile from './ResumeTimelineMoblie';
 import MyService from './MyService';
+import Skills from './Skills'
 // import load from './assets/loader.gif';
 
 // window.addEventListener("load", function () {
@@ -32,6 +33,7 @@ function App(){
         <ResumeTimeline/>
         <ResumeTimelineMobile/>
         <MyService/>
+        <Skills/>
       </div>
   )
 }
