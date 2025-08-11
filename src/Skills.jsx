@@ -44,7 +44,7 @@ const SkillCircle = ({ percentage, label }) => {
         />
         {/* Progress circle */}
         <motion.circle
-          stroke="orange"
+          stroke="#FF9000"
           fill="transparent"
           strokeWidth={strokeWidth}
           strokeLinecap="round"
