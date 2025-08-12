@@ -15,7 +15,7 @@ function Work(){
                 {/* image 1 */}
                 <div>
                     <a href="https://zayd-portfolio.vercel.app/">
-                        <img src={Portfolio} alt=""  className="w-80 h-40 rounded-xl shadow-2xl"/>
+                        <img src={Portfolio} alt=""  className="w-80 h-40 rounded-xl shadow-2xl hover:scale-110"/>
                         <h1 className="text-center text-white comic-neue-bold text-xl py-2">Portfolio</h1>
                     </a>
                     
