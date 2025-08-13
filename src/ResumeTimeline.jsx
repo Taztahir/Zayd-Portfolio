@@ -15,7 +15,7 @@ const experiences = [
   {
     title: "Frontend Internship",
     company: "Gravity Lab",
-    date: "January 2025 - Current",
+    date: "January 2025 - till date",
     description:
       "Collaborated with a team of developers to build responsive user interfaces using React.js and Tailwind CSS. Gained practical experience working with REST APIs, Git version control, and debugging tools. Improved code quality through regular reviews and learned agile development practices in a real-world environment.",
     side: "right",
@@ -31,7 +31,7 @@ const experiences = [
   {
     title: "Frontend Developer",
     company: "Freelancer",
-    date: "August 2025 - Current",
+    date: "August 2025 - till date",
     description:
       "Worked independently with clients to design and develop responsive, user-friendly web interfaces using React.js, Tailwind CSS, Bootstrap, and JavaScript. Translated client requirements into functional websites, implemented interactive components, and ensured mobile-first design and cross-browser compatibility. Utilized Git and GitHub for version control and project collaboration. Gained experience in project management, remote communication, and delivering high-quality work within deadlines.",
     side: "right",
