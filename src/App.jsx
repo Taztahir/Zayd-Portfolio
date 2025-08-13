@@ -8,6 +8,7 @@ import Skills from './Skills'
 import Work from './Work'
 import Contact from './Contact';
 import Map from './Map'
+import Footer from './Footer'
 // import load from './assets/loader.gif';
 
 // window.addEventListener("load", function () {
@@ -40,6 +41,7 @@ function App(){
         <Work/>
         <Contact/>
         <Map/>
+        <Footer/>
       </div>
   )
 }
