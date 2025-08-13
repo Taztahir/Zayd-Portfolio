@@ -7,6 +7,7 @@ import MyService from './MyService';
 import Skills from './Skills'
 import Work from './Work'
 import Contact from './Contact';
+import Map from './Map'
 // import load from './assets/loader.gif';
 
 // window.addEventListener("load", function () {
@@ -38,6 +39,7 @@ function App(){
         <Skills/>
         <Work/>
         <Contact/>
+        <Map/>
       </div>
   )
 }

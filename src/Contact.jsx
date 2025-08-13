@@ -13,12 +13,12 @@ function Contact(){
             </div>
             <div className="md:px-16 space-y-5 px-10">
                 <h1 className="lg:text-5xl comic-neue-bold text-3xl">Contact</h1>
-                <form action="" className="grid space-y-5 comic-neue-regular text-2xl">
-                    <input className="border-2 py-3 px-4 outline-[#ff9000] rounded-sm border-[#dfdfdf] lg:w-60" type="text" name="" id=""  placeholder="Your Firstname"/>
-                    <input className="border-2 py-3 px-4 outline-[#ff9000] rounded-sm border-[#dfdfdf] lg:w-60" type="text" name="" id=""  placeholder="Your Lastname" />
-                    <input className="border-2 py-3 px-4 outline-[#ff9000] rounded-sm border-[#dfdfdf] lg:w-150" type="email" name="" id="" placeholder="Your email address" />
-                    <input className="border-2 py-3 px-4 outline-[#ff9000] rounded-sm border-[#dfdfdf] lg:w-150" type="text" name="" id=""  placeholder="Your Subject"/>
-                    <input className="border-2 py-3 px-4 outline-[#ff9000] rounded-sm border-[#dfdfdf] lg:w-150 pb-40" type="text" name="" id=""  placeholder="Say somthing about us"/>
+                <form action="https://formsubmit.co/taztaz162004@gmail.com" className="grid space-y-5 comic-neue-regular text-2xl" method="POST">
+                    <input className="border-2 py-3 px-4 outline-[#ff9000] rounded-sm border-[#dfdfdf] lg:w-60" type="text" name="firstname" id=""  placeholder="Your Firstname" required/>
+                    <input className="border-2 py-3 px-4 outline-[#ff9000] rounded-sm border-[#dfdfdf] lg:w-60" type="text" name="lastname" id=""  placeholder="Your Lastname" required/>
+                    <input className="border-2 py-3 px-4 outline-[#ff9000] rounded-sm border-[#dfdfdf] lg:w-150" type="email" name="email" id="" placeholder="Your email address" required/>
+                    <input className="border-2 py-3 px-4 outline-[#ff9000] rounded-sm border-[#dfdfdf] lg:w-150" type="text" name="subject" id=""  placeholder="Your Subject" required/>
+                    <textarea name="Messge" id="" placeholder="Say Somthing" className="border-2 py-3 px-4 outline-[#ff9000] rounded-sm border-[#dfdfdf] lg:w-150 pb-40"></textarea>
                     <button className="comic-neue-bold bg-[#FF9000] text-white py-2 text-xl lg:w-40 rounded-lg lg:rounded-full">
                         Send message
                     </button>
