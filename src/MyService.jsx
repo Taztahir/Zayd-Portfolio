@@ -14,7 +14,7 @@ function MyService(){
                             <div className="space-y-2">
                                 <h1 className="text-white text-2xl comic-neue-bold">Web Development</h1>
                                 <p className="comic-neue-regular text-white">
-                                    I build responsive and user-friendly websites using modern tools like HTML, CSS, JavaScript, React, Tailwind, and WordPress. I focus on clean design, fast performance, and seamless user experience. Whether it’s a portfolio, e-commerce, or booking site—I create web solutions that work.
+                                    I build responsive and user-friendly websites using modern tools like HTML, CSS, JavaScript, React, Tailwind, Bootstrap and WordPress. I focus on clean design, fast performance, and seamless user experience. Whether it’s a portfolio, e-commerce, or booking site—I create web solutions that work.
                                 </p>
                             </div>
                         </div>
@@ -25,7 +25,7 @@ function MyService(){
                             <div className="space-y-2">
                                 <h1 className="text-white text-2xl comic-neue-bold">Tutor</h1>
                                 <p className="comic-neue-regular text-white">
-                                    I teach web development in a simple and practical way—covering HTML, CSS, JavaScript, React, and WordPress. My focus is on helping students build real-world projects, understand core concepts, and grow their confidence as developers.
+                                    I teach web development in a simple and practical way—covering HTML, CSS, JavaScript, React, Bootstrap and WordPress. My focus is on helping students build real-world projects, understand core concepts, and grow their confidence as developers.
                                 </p>
                             </div>
                         </div>

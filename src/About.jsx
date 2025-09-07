@@ -62,7 +62,7 @@ function About(){
                     I’m <b>Tahir Zayd</b> , a passionate web developer who loves turning ideas into interactive and visually appealing digital experiences. I specialize in creating modern, responsive, and user‑friendly websites that work seamlessly across all devices.
                 </p>
                 <p className='sm:text-xl text-sm comic-neue-regular'>
-                    I work with <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>React</b>, and <b>Tailwind CSS</b>, and I am currently expanding my skills by studying React Native to build high‑quality mobile applications. Every project is an opportunity to improve my craft, solve problems, and create something meaningful for people to use and enjoy.
+                    I work with <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>React</b>, <b>Bootstrap</b> and <b>Tailwind CSS</b> and I am currently expanding my skills by studying React Native to build high‑quality mobile applications. Every project is an opportunity to improve my craft, solve problems, and create something meaningful for people to use and enjoy.
                 </p>
                 {/* Multimedia */}
                     <div className='flex gap-3'>
