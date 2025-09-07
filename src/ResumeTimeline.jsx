@@ -12,21 +12,21 @@ const experiences = [
       "Acquired hands-on knowledge of Front-end Development skills, delving into HTML5, CSS, TAILWIND, REACTJS and JAVASCRIPT. I also gained a solid foundation in Git and Git Hub and also gaining experience in collaborating with Team Members.",
     side: "left",
   },
-  {
-    title: "Frontend Internship",
-    company: "Gravity Lab",
-    date: "January 2025 - till date",
-    description:
-      "Collaborated with a team of developers to build responsive user interfaces using React.js and Tailwind CSS. Gained practical experience working with REST APIs, Git version control, and debugging tools. Improved code quality through regular reviews and learned agile development practices in a real-world environment.",
-    side: "right",
-  },
+  // {
+  //   title: "Frontend Internship",
+  //   company: "Gravity Lab",
+  //   date: "January 2025 - till date",
+  //   description:
+  //     "Collaborated with a team of developers to build responsive user interfaces using React.js and Tailwind CSS. Gained practical experience working with REST APIs, Git version control, and debugging tools. Improved code quality through regular reviews and learned agile development practices in a real-world environment.",
+  //   side: "right",
+  // },
   {
     title: "Frontend Tutor",
     company: "Dervac HUB",
     date: "June 2025 - August 2025",
     description:
       "Guided beginners at YABATECH Secondary school through the fundamentals of frontend development, including HTML, CSS, JavaScript, and Tailwind CSS. Created learning materials, offered one-on-one support, and helped students build real-world projects. Improved my communication skills and deepened my understanding of core frontend concepts through teaching.",
-    side: "left",
+    side: "right",
   },
   {
     title: "Frontend Developer",
@@ -34,7 +34,7 @@ const experiences = [
     date: "August 2025 - till date",
     description:
       "Worked independently with clients to design and develop responsive, user-friendly web interfaces using React.js, Tailwind CSS, Bootstrap, and JavaScript. Translated client requirements into functional websites, implemented interactive components, and ensured mobile-first design and cross-browser compatibility. Utilized Git and GitHub for version control and project collaboration. Gained experience in project management, remote communication, and delivering high-quality work within deadlines.",
-    side: "right",
+    side: "left",
   },
 ];
 

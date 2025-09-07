@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, percent, useInView } from "framer-motion";
 
 const SkillCircle = ({ percentage, label }) => {
   const circleRadius = 90;
@@ -69,13 +69,14 @@ const SkillCircle = ({ percentage, label }) => {
 function Skills() {
   const skills = [
     { label: "HTML5", percentage: 95 },
-    { label: "CSS3", percentage: 93 },
+    { label: "CSS3", percentage: 90 },
     { label: "TailwindCSS", percentage: 90 },
     { label: "Javascript", percentage: 80 },
-    { label: "React", percentage: 80 },
+    { label: "Bootstrap", percentage: 70},
+    { label: "React", percentage: 70 },
     { label: "Git & Github", percentage: 70 },
-    { label: "WordPress", percentage: 70 },
-    { label: "React Native", percentage: 30 },
+    { label: "WordPress", percentage: 30 },
+    { label: "React Native", percentage: 10 },
   ];
 
   return (
