@@ -11,14 +11,14 @@ const experiences = [
       "Acquired hands-on knowledge of Front-end Development skills, delving into HTML5, CSS, TAILWIND, REACTJS and JAVASCRIPT. I also gained a solid foundation in Git and Git Hub and also gaining experience in collaborating with Team Members.",
     side: "left",
   },
-  {
-    title: "Frontend Internship",
-    company: "Gravity Lab",
-    date: "January 2025 - Current",
-    description:
-      "Collaborated with a team of developers to build responsive user interfaces using React.js and Tailwind CSS. Gained practical experience working with REST APIs, Git version control, and debugging tools. Improved code quality through regular reviews and learned agile development practices in a real-world environment.",
-    side: "left",
-  },
+  // {
+  //   title: "Frontend Internship",
+  //   company: "Gravity Lab",
+  //   date: "January 2025 - Current",
+  //   description:
+  //     "Collaborated with a team of developers to build responsive user interfaces using React.js and Tailwind CSS. Gained practical experience working with REST APIs, Git version control, and debugging tools. Improved code quality through regular reviews and learned agile development practices in a real-world environment.",
+  //   side: "left",
+  // },
   {
     title: "Frontend Tutor",
     company: "Dervac HUB",
