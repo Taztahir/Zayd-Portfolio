@@ -3,8 +3,8 @@ import './App.css'
 
 function Header(){
     return(
-        <header className='Header '>
-            <div className='bg-[#FF9000]/90 text-center md:space-y-8 space-y-10 md:py-85 lg:py-36 py-52'>
+        <header className='Header h-screen'>
+            <div className='bg-[#FF9000]/90 text-center md:space-y-8 space-y-10 py-20 h-screen'>
                 {/* Profile Image  */}
                 <div className='flex justify-center items-center'>
                     <img src={Profile} alt=""  className='rounded-full size-52'/>
