@@ -30,7 +30,7 @@ const ScrollUpButton = () => {
         onClick={scrollToTop}
         className="fixed bottom-6 animate-bounce right-3 lg:right-6 p-3 rounded-full bg-[#E68200] text-white shadow-2xl hover:bg-white duration-300 hover:text-[#E00912] transition"
       >
-        <ArrowUp size={13} />
+        <ArrowUp size={20} />
       </button>
     )
   );
