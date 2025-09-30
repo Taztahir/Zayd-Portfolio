@@ -3,8 +3,8 @@ import './App.css'
 
 function Header(){
     return(
-        <header className='Header h-screen'>
-            <div className='bg-[#FF9000]/90 text-center md:space-y-8 space-y-10 py-20 h-screen'>
+        <header className='Header lg:h-screen'>
+            <div className='bg-[#FF9000]/90 text-center md:space-y-8 space-y-10 max-lg:py-40 py-20 h-screen'>
                 {/* Profile Image  */}
                 <div className='flex justify-center items-center'>
                     <img src={Profile} alt=""  className='rounded-full size-52'/>
@@ -28,7 +28,7 @@ function Header(){
                             </div>
                         </a>
                         {/* github  */}
-                        <a href="https://github.com/Taztahir?tab=repositories" target='_blank'>
+                        <a href="https://github.com/Taztahir" target='_blank'>
                             <div>
                                 <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-github"></ion-icon>
                             </div>

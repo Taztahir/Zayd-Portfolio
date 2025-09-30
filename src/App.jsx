@@ -9,6 +9,7 @@ import Work from './Work'
 import Contact from './Contact';
 import Map from './Map'
 import Footer from './Footer'
+import ScrollUpButton from './ScrollUpButton';
 // import load from './assets/loader.gif';
 
 // window.addEventListener("load", function () {
@@ -42,6 +43,7 @@ function App(){
         <Contact/>
         <Map/>
         <Footer/>
+        <ScrollUpButton/>
       </div>
   )
 }
