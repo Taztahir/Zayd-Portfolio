@@ -1,98 +1,126 @@
-import { useEffect, useState, useRef } from "react";
-import { motion, percent, useInView } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 
-const SkillCircle = ({ percentage, label }) => {
-  const circleRadius = 90;
-  const strokeWidth = 4;
-  const circumference = 2 * Math.PI * circleRadius;
+/* === Skills data (replace icon paths) === */
+const skills = [
+  { name: "HTML", percent: 92, icon: "/icons/html5.svg" },
+  { name: "CSS3", percent: 80, icon: "/icons/css3.svg" },
+  { name: "Javascript", percent: 85, icon: "/icons/js.svg" },
+  { name: "Webflow", percent: 99, icon: "/icons/webflow.svg" },
+  { name: "ReactJS", percent: 89, icon: "/icons/react.svg" },
+  { name: "Framer", percent: 93, icon: "/icons/framer.svg" },
+];
 
-  // Ref to track when the circle is visible
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }); // triggers only once
+/* === Smooth CountUp component (uses requestAnimationFrame) === */
+const CountUp = ({ target, isVisible, duration = 1200 }) => {
+  const [value, setValue] = useState(0);
+  const rafRef = useRef(null);
+  const startRef = useRef(null);
 
-  const [progress, setProgress] = useState(0);
-
-  // Animate the circle when it becomes visible
   useEffect(() => {
-    if (isInView) {
-      let start = 0;
-      const interval = setInterval(() => {
-        start += 1;
-        setProgress(start);
-        if (start >= percentage) clearInterval(interval);
-      }, 10); // speed of animation
-    }
-  }, [isInView, percentage]);
+    if (!isVisible) return;
 
-  const offset = circumference - (progress / 100) * circumference;
+    const step = (timestamp) => {
+      if (!startRef.current) startRef.current = timestamp;
+      const elapsed = timestamp - startRef.current;
+      const progress = Math.min(elapsed / duration, 1);
+      const current = Math.round(progress * target);
+      setValue(current);
+
+      if (progress < 1) {
+        rafRef.current = requestAnimationFrame(step);
+      } else {
+        setValue(target); // final exact value
+      }
+    };
+
+    rafRef.current = requestAnimationFrame(step);
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      startRef.current = null;
+    };
+  }, [isVisible, target, duration]);
 
   return (
-    <div ref={ref} className="flex flex-col items-center my-8 relative">
-      <svg
-        height={circleRadius * 2}
-        width={circleRadius * 2}
-        className="transform -rotate-90"
-      >
-        {/* Background circle */}
-        <circle
-          stroke="#f3f4f6"
-          fill="transparent"
-          strokeWidth={strokeWidth}
-          r={circleRadius - strokeWidth}
-          cx={circleRadius}
-          cy={circleRadius}
-        />
-        {/* Progress circle */}
-        <motion.circle
-          stroke="#FF9000"
-          fill="transparent"
-          strokeWidth={strokeWidth}
-          strokeLinecap="round"
-          strokeDasharray={circumference}
-          strokeDashoffset={offset}
-          r={circleRadius - strokeWidth}
-          cx={circleRadius}
-          cy={circleRadius}
-          transition={{ duration: 1, ease: "easeInOut" }}
-        />
-      </svg>
-
-      {/* Centered text */}
-      <div className="absolute flex flex-col items-center justify-center h-[180px] w-[180px]">
-        <span className="comic-neue-bold text-lg">{label}</span>
-        <span className="comic-neue-regular">{progress}%</span>
-      </div>
-    </div>
+    <span className="mt-4 text-gray-200 text-lg font-semibold">{value}%</span>
   );
 };
 
-function Skills() {
-  const skills = [
-    { label: "HTML5", percentage: 95 },
-    { label: "CSS3", percentage: 90 },
-    { label: "TailwindCSS", percentage: 90 },
-    { label: "Javascript", percentage: 80 },
-    { label: "Bootstrap", percentage: 70},
-    { label: "React", percentage: 70 },
-    { label: "Git & Github", percentage: 70 },
-    { label: "WordPress", percentage: 30 },
-    { label: "React Native", percentage: 10 },
-  ];
+/* === Single skill card that detects its own visibility === */
+const SkillCard = ({ skill, index }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, amount: 0.45 });
 
   return (
-    <div className="my-20">
-      <h1 className="text-center comic-neue-bold text-5xl">Skills</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 justify-items-center mt-10">
-        {skills.map((skill, index) => (
-          <SkillCircle
-            key={index}
-            label={skill.label}
-            percentage={skill.percentage}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 18, scale: 0.98 }}
+      animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+      transition={{ duration: 0.55, delay: index * 0.12 }}
+      className="bg-[#12091c] border border-[#2A1454] rounded-2xl p-6 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
+    >
+      {/* Icon with dimmed → clear hover */}
+      <motion.img
+        src={skill.icon}
+        alt={skill.name}
+        initial={{ scale: 0.85, opacity: 0.4 }}              // dim on load
+        animate={inView ? { scale: 1, opacity: 0.6 } : {}}   // slightly dim in view
+        whileHover={{ opacity: 1 }}                          // clear on hover
+        transition={{
+          type: "spring",
+          stiffness: 140,
+          damping: 16,
+          delay: index * 0.12,
+        }}
+        className="w-16 h-16 object-contain transition-opacity duration-300"
+      />
 
-export default Skills;
+      {/* CountUp starts only when card is in view */}
+      <CountUp target={skill.percent} isVisible={inView} duration={1200} />
+
+      <span className="mt-2 text-sm text-gray-400">{skill.name}</span>
+    </motion.div>
+  );
+};
+
+/* === Skills section (main) === */
+const SkillsSection = () => {
+  return (
+    <section
+      id="skills"
+      className="bg-[#0f0715] text-white py-20 px-6 sora overflow-hidden"
+    >
+      <div className="max-w-6xl mx-auto text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl font-extrabold text-[#8750F7]"
+        >
+          My Skills
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.12 }}
+          viewport={{ once: true }}
+          className="mt-4 text-gray-300 max-w-2xl mx-auto"
+        >
+          We put your ideas and thus your wishes in the form of a unique web project that
+          inspires you and your customers.
+        </motion.p>
+
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+          {skills.map((s, i) => (
+            <SkillCard key={s.name} skill={s} index={i} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SkillsSection;

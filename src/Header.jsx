@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Twitter, Dribbble, Linkedin, Github } from "lucide-react";
+import { Twitter, Dribbble, Linkedin, Github, } from "lucide-react";
 import Profile from "./assets/profile.svg";
 
 export default function Header() {
@@ -59,7 +59,7 @@ export default function Header() {
 
             {/* Social Icons */}
             <div className="flex gap-4">
-              {[Twitter, Dribbble, Linkedin, Github].map((Icon, idx) => (
+              {[Twitter, Dribbble, Linkedin, Github,].map((Icon, idx) => (
                 <motion.a
                   key={idx}
                   href="#"

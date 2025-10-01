@@ -37,10 +37,10 @@ function App(){
         <Navbar/>
         <Header/>
         <About/>
+        <Skills/>
         <ResumeTimeline/>
         <ResumeTimelineMobile/>
         <MyService/>
-        <Skills/>
         <Work/>
         <Contact/>
         <Map/>
