@@ -2,7 +2,7 @@ import './App.css'
 
 function About(){
     return(
-        <section className='bg-white comic-neue-regular space-y-20 lg:py-10 py-20 '>
+        <section id='about' className='bg-white comic-neue-regular space-y-20 lg:py-10 py-20 '>
             <div>
                 {/* About me  */}
                 <h1 className='text-5xl ? text-center comic-neue-regular'>About Me</h1>

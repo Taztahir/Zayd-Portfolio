@@ -10,6 +10,7 @@ import Contact from './Contact';
 import Map from './Map'
 import Footer from './Footer'
 import ScrollUpButton from './ScrollUpButton';
+import Navbar from './Navbar';
 // import load from './assets/loader.gif';
 
 // window.addEventListener("load", function () {
@@ -33,6 +34,7 @@ import ScrollUpButton from './ScrollUpButton';
 function App(){
   return(
       <div className='selection:bg-[#E68200] selection:text-white'>
+        <Navbar/>
         <Header/>
         <About/>
         <ResumeTimeline/>

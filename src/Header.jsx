@@ -1,56 +1,79 @@
-import Profile from './assets/profile.svg'
-import './App.css'
+import React from "react";
+import { motion } from "framer-motion";
+import { Twitter, Dribbble, Linkedin, Github } from "lucide-react";
+import Profile from "./assets/profile.svg";
 
-function Header(){
-    return(
-        <header className='Header lg:h-screen'>
-            <div className='bg-[#FF9000]/90 text-center md:space-y-8 space-y-10 max-lg:py-40 py-20 h-screen'>
-                {/* Profile Image  */}
-                <div className='flex justify-center items-center'>
-                    <img src={Profile} alt=""  className='rounded-full size-52'/>
-                </div>
-                {/* Profile name  */}
-                <div>
-                    <h1 className='kaushan-script-regular text-white md:text-6xl text-5xl inline-block -rotate-7'>- Zayd Tahir -</h1>
-                </div>
-                {/* Multimedia  */}
-                <div className='space-y-7'>
-                    {  /* Text  */}
-                    <div>
-                        <span className='space-mono-regular text-white '>Web developer / Frontend Tutor</span>
-                    </div>
-                    {/* Multimedia */}
-                    <div className='flex justify-center gap-5'>
-                        {/* Twitter */}
-                        <a href="https://x.com/taz1393177" target='_blank'>
-                            <div>
-                                <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-twitter" ></ion-icon>
-                            </div>
-                        </a>
-                        {/* github  */}
-                        <a href="https://github.com/Taztahir" target='_blank'>
-                            <div>
-                                <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-github"></ion-icon>
-                            </div>
-                        </a>
-                        {/* whatapp  */}
-                        <a href="https://api.whatsapp.com/send/?phone=%2B2349060720810&text&type=phone_number&app_absent=0" target='_blank'>
-                            <div>
-                                <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-whatsapp"></ion-icon>
-                            </div>
-                        </a>                    
-                        {/* instagram  */}
-                        {/* <a href="" target='_blank'>
-                            <div>
-                                <ion-icon className="text-4xl text-white hover:text-black duration-500 ease-in-out" name="logo-instagram"></ion-icon>
-                            </div>
-                        </a> */}
+export default function Header() {
+  return (
+    <section
+      id="hero"
+      className="lg:h-screen sora flex items-center justify-center bg-[#0F0715] px-6"
+    >
+      {/* Main Card */}
+      <motion.div
+        className="bg-[#0b0014] border border-[#2A1454] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 max-w-6xl w-full"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        {/* Profile Image */}
+        <motion.div
+          className="flex-shrink-0 border border-[#2A1454] rounded-xl overflow-hidden w-64 h-64"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.7 }}
+        >
+          <img src={Profile} alt="Profile" className="w-full h-full" />
+        </motion.div>
 
-                    </div>
-                </div>
+        {/* Content */}
+        <motion.div
+          className="text-center md:text-left"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
+        >
+          <h1 className="text-4xl md:text-[58px] sora leading-[69px] font-bold text-[#8750F7] mb-4">
+            Hi, I am{" "}
+            <span className="text-[#8750F7]">
+              Web <br /> Developer
+            </span>{" "}
+            + Tutor <br /> 
+          </h1>
+
+          <p className="text-[#DDDDDD] sora mb-8 max-w-md">
+            I design and code beautifully simple things and I love what I do.
+            Just simple like that!
+          </p>
+
+          <div className="flex flex-wrap justify-center md:justify-start gap-4">
+            {/* Button */}
+            <motion.a
+              href="#"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#8750F7] hover:bg-[#6c35d8] text-white px-6 py-3 rounded-full font-medium transition"
+            >
+              Hire me!
+            </motion.a>
+
+            {/* Social Icons */}
+            <div className="flex gap-4">
+              {[Twitter, Dribbble, Linkedin, Github].map((Icon, idx) => (
+                <motion.a
+                  key={idx}
+                  href="#"
+                  className="border border-[#8750F7] p-3 text-[#8750F7] hover:text-white hover:bg-[#8750F7] transition duration-300 flex items-center rounded-full"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Icon />
+                </motion.a>
+              ))}
             </div>
-
-        </header>
-    )
+          </div>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
 }
-export default Header;
