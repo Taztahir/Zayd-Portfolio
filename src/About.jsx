@@ -9,7 +9,7 @@ const AboutSection = () => {
         <StatsSection />
       </div>
       {/* About Section */}
-      <div className="max-w-6xl mx-auto lg:flex gap-10">
+      <div className="max-w-6xl mx-auto lg:flex space-y-10 gap-10">
         
         {/* Left Card */}
         <div className="bg-[#12091c] border border-[#2A1454] rounded-2xl p-10 flex flex-col justify-between">
