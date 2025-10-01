@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <nav
       className={` nunito ${
-        scrolled ? "bg-black backdrop-blur-md fixed w-full top-0 left-0 z-50 transition-all duration-300 text-black shadow-lg border-gray-100" : "bg-[#0F0715] text-white"
+        scrolled ? "bg-black  backdrop-blur-md fixed w-full top-0 left-0 z-50 transition-all duration-300 text-black shadow-lg border-gray-100" : "bg-[#0F0715] text-white"
       }`}
     >
       <div className="lg:max-w-6xl max-md:px-6 lg:px-6 max-lg:max-w-2xl mx-auto py-5 flex justify-between items-center">
@@ -74,7 +74,7 @@ const Navbar = () => {
         <div className="hidden lg:block hover:scale-95 transition-transform duration-300">
           <a
             href="#gallery"
-            className="text-sm barlow-regular shadow-white bg-transparent border-2 duration-300 transition hover:bg-white hover:text-black border-white text-white px-7 py-3 font-semibold"
+            className="text-sm barlow-regular shadow-white bg-[#8750F7] border-2 duration-300 transition hover:bg-white hover:text-black rounded-full border-[#8750F7] text-white px-7 py-3 font-semibold"
           >
             Resume
           </a>

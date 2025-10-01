@@ -1,100 +1,76 @@
-import './App.css'
+import React, { useEffect, useState } from "react";
+import { Trophy, Briefcase, Grid, Crown } from "lucide-react";
+import { motion, useInView } from "framer-motion";
 
-function About(){
-    return(
-        <section id='about' className='bg-white comic-neue-regular space-y-20 lg:py-10 py-20 '>
-            <div>
-                {/* About me  */}
-                <h1 className='text-5xl ? text-center comic-neue-regular'>About Me</h1>
-            </div>
-            <div className='lg:flex gap-10 lg:max-w-5xl md:mx-auto md:max-w-3xl sm:mx-10 mx-5 max-lg:space-y-5'>
-                <div className='flex md:gap-10 sm:gap-5 '>
-                {/* details  */}
-                <div className='space-y-3 font-bold md:text-xl text-sm'>
-                    {/* full name  */}
-                    <div className='w-30'>
-                        <span>Full Name:</span>
-                    </div>
-                    {/* phone number  */}
-                    <div className=''>
-                        <span>Phone:</span>
-                    </div>
-                    {/* email  */}
-                    <div>
-                        <span>Email:</span>
-                    </div>
-                    {/* website  */}
-                    <div>
-                        <span>Website:</span>
-                    </div>
-                    {/* address  */}
-                    <div>
-                        <span>Address:</span>
-                    </div>
-                </div>
-                <div className='space-y-3 text-[#4D4D4D] md:text-xl text-sm'>
-                    {/* full name  */}
-                    <div className='items-center space-x-10'>
-                        <span>Tahir Zayd</span>
-                    </div>
-                    {/* phone number  */}
-                    <div className='items-center space-x-10'>
-                        <span> +234 906 0720 810</span>
-                    </div>
-                    {/* email  */}
-                    <div>
-                        <span>taztaz162004@gmail.com</span>
-                    </div>  
-                    {/* website  */}
-                    <div>
-                        <span><a href="">https://zayd-portfolio.vercel.app</a></span>
-                    </div>
-                    {/* address  */}
-                    <div>
-                        <span>42B Owororoad, <br /> Oworoshoki, Lagos</span>
-                    </div>
-                </div>
-            </div>
-            {/* full details  */}
-            <div className='space-y-5'>
-                <h1 className='text-4xl '>Hello There!</h1>
-                <p className='sm:text-xl text-sm comic-neue-regular'>
-                    I’m <b>Tahir Zayd</b> , a passionate web developer who loves turning ideas into interactive and visually appealing digital experiences. I specialize in creating modern, responsive, and user‑friendly websites that work seamlessly across all devices.
-                </p>
-                <p className='sm:text-xl text-sm comic-neue-regular'>
-                    I work with <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, <b>React</b>, <b>Bootstrap</b> and <b>Tailwind CSS</b> and I am currently expanding my skills by studying React Native to build high‑quality mobile applications. Every project is an opportunity to improve my craft, solve problems, and create something meaningful for people to use and enjoy.
-                </p>
-                {/* Multimedia */}
-                    <div className='flex gap-3'>
-                        {/* Twitter */}
-                        <a href="https://x.com/taz1393177" target='_blank'>
-                            <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
-                                <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-twitter"></ion-icon>
-                            </div>
-                        </a>
-                        {/* github  */}
-                        <a href="https://github.com/Taztahir" target='_blank'>
-                            <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
-                                <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-github"></ion-icon>
-                            </div>
-                        </a>
-                        {/* whatapp  */}
-                        <a href="https://api.whatsapp.com/send/?phone=%2B2349060720810&text&type=phone_number&app_absent=0" target='_blank'>
-                            <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
-                                <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-whatsapp"></ion-icon>
-                            </div>
-                        </a>
-                        {/* instagram  */}
-                        {/* <a href="">
-                            <div className='bg-[#2F3C4F] py-2 px-2 items-center flex hover:bg-[#FF9000] ease-in-out duration-500 rounded-2xl'>
-                                <ion-icon className="sm:text-4xl text-2xl text-white" name="logo-instagram"></ion-icon>
-                            </div>
-                        </a> */}
-                    </div>
-            </div>
+const statsData = [
+  { icon: <Trophy size={40} className="text-[#8750F7]" />, value: 14, suffix: "%", label: "Job achievements" },
+  { icon: <Briefcase size={40} className="text-[#8750F7]" />, value: 2, suffix: "+", label: "Years of Experience" },
+  { icon: <Grid size={40} className="text-[#8750F7]" />, value: 15, suffix: "+", label: "Happy Clients" },
+  { icon: <Crown size={40} className="text-[#8750F7]" />, value: 14, suffix: "+", label: "Project Completed" },
+];
 
-            </div>
-        </section>
-    )
-}
-export default About;
+const Counter = ({ value, suffix, inView }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!inView) return; // only start when visible
+
+    let start = 0;
+    const duration = 2000; // 2 seconds
+    const stepTime = Math.abs(Math.floor(duration / value));
+    const timer = setInterval(() => {
+      start += 1;
+      setCount(start);
+      if (start >= value) {
+        clearInterval(timer);
+      }
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [value, inView]);
+
+  return (
+    <span className="text-5xl font-bold text-gray-100">
+      {count}
+      {suffix}
+    </span>
+  );
+};
+
+const StatsSection = () => {
+  return (
+    <section className="bg-[#0f0715] sora text-white py-16 px-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto bg-[#12091c] border border-[#2A1454] rounded-2xl p-10">
+        {statsData.map((stat, index) => {
+          // hook for visibility
+          const ref = React.useRef(null);
+          const inView = useInView(ref, { once: true, amount: 0.4 });
+
+          return (
+            <motion.div
+              ref={ref}
+              key={index}
+              className="flex flex-col items-center text-center space-y-3"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ type: "spring", stiffness: 200, damping: 12, delay: index * 0.2 }}
+              >
+                {stat.icon}
+              </motion.div>
+              <Counter value={stat.value} suffix={stat.suffix} inView={inView} />
+              <p className="text-gray-300">{stat.label}</p>
+            </motion.div>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
+
+export default StatsSection;
