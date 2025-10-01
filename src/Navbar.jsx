@@ -63,7 +63,7 @@ const Navbar = () => {
                 className={`transition-colors rounded-full barlow-regular px-5 py-2 font-semibold ${
                   activeSection === item.id
                     ? "text-white bg-[#8750F7] "
-                    : " text-white hover:bg-[#8750F7] transition duration-300"
+                    : "text-white hover:bg-[#8750F7] transition duration-300"
                 }`}
               >
                 {item.label}
