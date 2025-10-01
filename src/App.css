@@ -79,6 +79,11 @@
   height: 830.375px;
   width: 100%;
 }
+.bg-about{
+  background-image: url(./assets/about-1.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
 
 html{
   scroll-behavior: smooth;

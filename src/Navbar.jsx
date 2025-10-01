@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <nav
       className={` nunito ${
-        scrolled ? "bg-black  backdrop-blur-md fixed w-full top-0 left-0 z-50 transition-all duration-300 text-black shadow-lg border-gray-100" : "bg-[#0F0715] text-white"
+        scrolled ? "bg-black backdrop-blur-md fixed w-full top-0 left-0 z-50 transition-all duration-300 shadow-lg border-gray-100" : "bg-[#0F0715] text-white"
       }`}
     >
       <div className="lg:max-w-6xl max-md:px-6 lg:px-6 max-lg:max-w-2xl mx-auto py-5 flex justify-between items-center">
