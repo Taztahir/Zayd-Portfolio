@@ -1,13 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Twitter, Dribbble, Linkedin, Github, } from "lucide-react";
+import { Twitter, Linkedin, Github } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa"; // WhatsApp icon
 import Profile from "./assets/profile.svg";
 
 export default function Header() {
+  // Social links with icons
+  const socialLinks = [
+    { icon: Twitter, url: "https://twitter.com/yourusername" },
+    { icon: Linkedin, url: "https://linkedin.com/in/yourusername" },
+    { icon: Github, url: "https://github.com/Taztahir" },
+    { icon: FaWhatsapp, url: "https://wa.me/2349060720810" }, // WhatsApp link
+  ];
+
   return (
     <section
       id="hero"
-      className="lg:h-screen sora flex items-center justify-center bg-[#0F0715] "
+      className="lg:h-screen sora flex items-center justify-center bg-[#0F0715]"
     >
       {/* Main Card */}
       <motion.div
@@ -38,7 +47,7 @@ export default function Header() {
             <span className="text-[#8750F7]">
               Web <br /> Developer
             </span>{" "}
-            + Tutor <br /> 
+            + Tutor <br />
           </h1>
 
           <p className="text-[#DDDDDD] sora text-[20px] mb-8 max-w-md">
@@ -59,15 +68,17 @@ export default function Header() {
 
             {/* Social Icons */}
             <div className="flex gap-4">
-              {[Twitter, Dribbble, Linkedin, Github,].map((Icon, idx) => (
+              {socialLinks.map(({ icon: Icon, url }, idx) => (
                 <motion.a
                   key={idx}
-                  href="#"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="border border-[#8750F7] p-3 text-[#8750F7] hover:text-white hover:bg-[#8750F7] transition duration-300 flex items-center rounded-full"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Icon />
+                  <Icon size={22} />
                 </motion.a>
               ))}
             </div>

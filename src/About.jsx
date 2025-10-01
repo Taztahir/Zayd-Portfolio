@@ -85,25 +85,27 @@ const About = () => {
               Achievements in my <br /> professional life.
             </h2>
             <p className="mt-6 text-gray-300 leading-relaxed">
-              Since beginning my journey as a freelance designer nearly 8 years ago, 
+              Since beginning my journey as a freelance designer nearly 2 years ago, 
               I've done remote work for agencies, consulted for startups, and collaborated 
               with talented people to create digital products for both business and consumer use.
             </p>
           </div>
+          <a href="#contact">
           <button
             aria-label="Contact Me"
             className="mt-8 inline-flex items-center px-6 py-3 w-fit duration-500 lg:rotate-4 hover:rotate-0 rounded-full bg-[#8750F7] text-white font-semibold hover:bg-purple-700 transition-transform"
           >
             Contact Me <ArrowUpRight className="ml-2 w-5 h-5" />
           </button>
+          </a>
         </div>
 
         {/* Right Card */}
         <div className="bg-[#12091c] border border-[#2A1454] rounded-2xl flex flex-col justify-between md:w-1/2">
           <div className="p-10">
-            <h3 className="text-xl font-semibold text-[#8750F7]">Interface Designer</h3>
+            <h3 className="text-xl font-semibold text-white">Web Developer</h3>
             <p className="mt-4 text-gray-300 leading-relaxed">
-              As a UI designer, I work closely with clients to understand their 
+              As a Web developer, I work closely with clients to understand their 
               needs and goals for their software or website.
             </p>
           </div>
