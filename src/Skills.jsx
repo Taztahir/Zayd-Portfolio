@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import ReactSvg from './assets/react.svg'
-import HtmlSvg from './assets/Html.svg'
+import TailwindcssSvg from './assets/Tailwindcss.svg'
 import BootstrapSvg from './assets/bootstrap.svg'
 import CssSvg from './assets/css.svg'
 import GithubSvg from './assets/github.svg'
@@ -19,7 +19,7 @@ import PythonSvg from './assets/python.svg'
 /* === Skills data (replace icon paths) === */
 const skills = [
   { name: "React", percent: 80, icon: ReactSvg },
-  { name: "HTML", percent: 90, icon: HtmlSvg },
+  { name: "HTML", percent: 90, icon: TailwindcssSvg },
   { name: "Bootstrap", percent: 85, icon: BootstrapSvg },
   { name: "CSS", percent: 99, icon: CssSvg },
   { name: "Github", percent: 80, icon: GithubSvg },
