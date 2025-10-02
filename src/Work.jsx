@@ -38,7 +38,7 @@ const sections = [
       {
         role: "Freelancer",
         position: "FullStack Developer",
-        date: "September 2025 - Date",
+        date: "January 2025 - Date",
       },
     ],
   },
