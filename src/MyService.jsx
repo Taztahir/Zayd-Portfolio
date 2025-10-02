@@ -1,48 +1,74 @@
-import { div } from "framer-motion/client";
+import React from "react";
+import { motion } from "framer-motion";
+import { Code2, GitBranch } from "lucide-react";
 
+export default function Specialization() {
+  const data = [
+    {
+      id: 1,
+      icon: <Code2 className="w-6 h-6 text-white" />,
+      title: "Web Development",
+      desc: "Building modern, scalable, and user-friendly web solutions.",
+      projects: "10 PROJECTS",
+    },
+    {
+      id: 2,
+      icon: <GitBranch className="w-6 h-6 text-white" />,
+      title: "Mobile Development",
+      desc: "Transforming ideas into interactive digital experiences.",
+      projects: "5 PROJECTS",
+    },
+  ];
 
+  return (
+    <section id="service" className="bg-[#0F0715] py-20 px-6 md:px-20">
+      {/* Heading */}
+      <motion.h2
+        className="text-4xl md:text-5xl font-bold text-[#8750F7] mb-10"
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        My <span className="text-white">Specialization</span>
+      </motion.h2>
 
-function MyService(){
-    return(
-        <div className="bg-[#FF9000] py-10">
-            <h1 className="text-white  comic-neue-bold text-5xl text-center">My Service</h1>
-                    <div className="text-center grid lg:grid-cols-3 max-w-6xl lg:mx-auto py-10 gap-5 max-sm:mx-5 max-md:mx-20">
-                        <div className="flex flex-col gap-5 items-center">
-                            <div className="bg-white w-24 rounded-full py-4 px-3">
-                                <ion-icon className="text-[#ff9000] text-6xl " name="bar-chart-outline"></ion-icon>
-                            </div>
-                            <div className="space-y-2">
-                                <h1 className="text-white text-2xl comic-neue-bold">Web Development</h1>
-                                <p className="comic-neue-regular text-white">
-                                    I build responsive and user-friendly websites using modern tools like HTML, CSS, JavaScript, React, Tailwind, Bootstrap and WordPress. I focus on clean design, fast performance, and seamless user experience. Whether it’s a portfolio, e-commerce, or booking site—I create web solutions that work.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-5 items-center">
-                            <div className="bg-white w-24 rounded-full py-4 px-3">
-                                <ion-icon className="text-[#ff9000] text-6xl " name="pencil-outline"></ion-icon>
-                            </div>
-                            <div className="space-y-2">
-                                <h1 className="text-white text-2xl comic-neue-bold">Tutor</h1>
-                                <p className="comic-neue-regular text-white">
-                                    I teach web development in a simple and practical way—covering HTML, CSS, JavaScript, React, Bootstrap and WordPress. My focus is on helping students build real-world projects, understand core concepts, and grow their confidence as developers.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-5 items-center">
-                            <div className="bg-white w-24 rounded-full py-4 px-3">
-                                <ion-icon className="text-[#ff9000] text-6xl " name="people-outline"></ion-icon>
-                            </div>
-                            <div className="space-y-2">
-                                <h1 className="text-white text-2xl comic-neue-bold">Support</h1>
-                                <p className="comic-neue-regular text-white">
-                                    I offer reliable WordPress support—handling bug fixes, plugin setup, content updates, backups, and performance optimization. I help keep your WordPress site secure, fast, and running smoothly.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+      {/* Cards */}
+      <div className="grid md:grid-cols-2 gap-8">
+        {data.map((item, i) => (
+          <motion.div
+            key={item.id}
+            className="bg-gradient-to-b from-[#2A1454] to-[#0F0715] p-6 rounded-2xl shadow-lg relative"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: i * 0.2 }}
+            viewport={{ once: true }}
+          >
+            {/* Icon */}
+            <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-[#8750F7] mb-6">
+              {item.icon}
+            </div>
+
+            {/* Title */}
+            <h3 className="text-xl font-semibold text-white mb-2">
+              {item.title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-gray-300 mb-6">{item.desc}</p>
+
+            {/* Projects Link */}
+            <a
+              href="#"
+              className="underline text-[#8750F7] font-medium hover:text-purple-400 transition"
+            >
+              {item.projects}
+            </a>
+
             
-        </div>
-    )
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
 }
-export default MyService;

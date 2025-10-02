@@ -32,9 +32,9 @@ const Navbar = () => {
     { id: "hero", label: "Home" },
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },  
-    { id: "resume", label: "Resume" },
-    { id: "service", label: "Service" },
     { id: "project", label: "Project" },
+    { id: "service", label: "Service" },
+    { id: "resume", label: "Resume" },
     { id: "contact", label: "Contact" }
 
   ];
@@ -94,17 +94,17 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-white shadow-md h-screen">
-          <ul className="flex flex-col space-y-2 px-6 py-4">
+        <div className="lg:hidden bg-[#1a1329] shadow-md h-screen">
+          <ul className="flex flex-col space-y-2 text-center px-6 py-4">
             {navItems.map((item) => (
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
                   onClick={() => setIsOpen(false)}
-                  className={`block transition-colors px-3 py-2 rounded-sm font-semibold ${
+                  className={`block transition-colors px-3 py-3 rounded-full font-semibold ${
                     activeSection === item.id
-                      ? "text-white bg-[#1c1c1ca7]"
-                      : "text-[#1F2937]"
+                      ? "text-[#8750F7] border-2 w-40 mx-auto"
+                      : "text-white hover:text-[#8750F7]"
                   }`}
                 >
                   {item.label}
@@ -115,9 +115,9 @@ const Navbar = () => {
               <a
                 href=""
                 onClick={() => setIsOpen(false)}
-                className="block w-full text-center bg-[#FF1313] text-white px-7 py-3 font-semibold"
+                className="block text-center w-fit rounded-full mx-auto bg-[#8750F7] text-white px-7 py-3 font-semibold"
               >
-                Get a Quote
+                Resume
               </a>
             </li>
           </ul>

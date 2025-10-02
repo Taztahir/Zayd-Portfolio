@@ -2,12 +2,10 @@ import './App.css';
 import Header from './Header';
 import About from './About'
 import ResumeTimeline from './ResumeTimeline';
-import ResumeTimelineMobile from './ResumeTimelineMoblie';
 import MyService from './MyService';
 import Skills from './Skills'
 import Work from './Work'
 import Contact from './Contact';
-import Map from './Map'
 import Footer from './Footer'
 import ScrollUpButton from './ScrollUpButton';
 import Navbar from './Navbar';
@@ -39,11 +37,9 @@ function App(){
         <About/>
         <Skills/>
         <ResumeTimeline/>
-        <ResumeTimelineMobile/>
         <MyService/>
         <Work/>
         <Contact/>
-        <Map/>
         <Footer/>
         <ScrollUpButton/>
       </div>

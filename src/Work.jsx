@@ -1,95 +1,118 @@
-import { div } from "framer-motion/client";
-import Portfolio from './assets/Portfolio-image.png'
-import Ramhaaz from './assets/ramhaaz-research.png'
-import Ecommerce from './assets/e-commerce.png'
-import AnimalImage from './assets/Animal-image.png'
-import Calculator from './assets/calculator.png'
-import TailwindHover from './assets/Tailwind-Hover.png'
-import TodoList from './assets/TodoList.png'
-import CoworkSpace from './assets/coworkspace.png'
-import Clipfy from './assets/Clipfy.png'
+import React from "react";
+import { motion } from "framer-motion";
 
+const sections = [
+  {
+    title: "EDUCATION",
+    items: [
+      {
+        role: "BA IN DESIGN",
+        position: "Product Designer",
+        date: "January 2024 - Present",
+      },
+      {
+        role: "UX/UI DESIGN SCHOOL",
+        position: "Product Designer",
+        date: "April 2024 - Present",
+      },
+    ],
+  },
+  {
+    title: "EXPERIENCE",
+    items: [
+      {
+        role: "LION PARCEL",
+        position: "Product Designer",
+        date: "February 2024 - Present",
+      },
+      {
+        role: "ENVER STUDIO",
+        position: "Product Designer",
+        date: "May 2024 - Present",
+      },
+      {
+        role: "TOKO DISTRIBUTOR",
+        position: "Product Designer",
+        date: "March 2024 - Present",
+      },
+      {
+        role: "SAKOO",
+        position: "Product Designer",
+        date: "June 2024 - Present",
+      },
+    ],
+  },
+  {
+    title: "PAST ROLES",
+    items: [
+      {
+        role: "LION PARCEL",
+        position: "Product Designer",
+        date: "February 2024 - Present",
+      },
+      {
+        role: "ENVER STUDIO",
+        position: "Product Designer",
+        date: "May 2024 - Present",
+      },
+      {
+        role: "TOKO DISTRIBUTOR",
+        position: "Product Designer",
+        date: "March 2024 - Present",
+      },
+    ],
+  },
+];
 
-function Work(){
-    return(
-        <div className="bg-[#FF9000] py-20">
-            <h1 className="text-center comic-neue-bold text-5xl text-white">Project</h1>
-            <hr className="w-20 mx-auto mt-3 text-white " />
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 lg:px-10 lg:max-w-7xl gap-5 mx-auto py-10 md:max-w-2xl max-w-xs">
-                {/* image 1 */}
-                <div>
-                    <a target="blank" href="https://zayd-portfolio.vercel.app/">
-                        <img src={Portfolio} alt=""  className=" shadow-2xl rounded-lg hover:scale-95 transition duration-300"/>
-                        
-                    </a>
-                    
-                </div>
-                {/* image 2  */}
-                <div>
-                    <a target="blank" href="https://ramhaaz.com/">
-                        <img src={Ramhaaz} alt="" className=" shadow-2xl rounded-lg hover:scale-95 transition duration-300"/>
-                        
-                    </a>
+const ExperienceSection = () => {
+  return (
+    <section id="resume" className="min-h-screen bg-[#0f0715] text-white py-20 px-6">
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-3xl md:text-4xl font-semibold text-center mb-12"
+      >
+        <span className="text-[#8750F7]">Education</span> & Work Experience
+      </motion.h2>
 
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {sections.map((section, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: i * 0.2 }}
+            viewport={{ once: true }}
+            className="bg-purple-950/30 backdrop-blur-sm rounded-xl p-6 border border-purple-800/30"
+          >
+            <h3 className="text-[#8750F7] font-bold mb-6">{section.title}</h3>
+            <div className="space-y-6 relative">
+              {section.items.map((item, idx) => (
+                <div key={idx} className="relative pl-6">
+                  <span className="absolute left-0 top-2 w-2 h-2 bg-[#8750F7] rounded-full"></span>
+                  {idx !== section.items.length - 1 && (
+                    <motion.span
+                      initial={{ height: 0 }}
+                      whileInView={{ height: "100%" }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                      viewport={{ once: true }}
+                      className="absolute left-[3px] top-4 w-[2px] bg-purple-600"
+                    ></motion.span>
+                  )}
+                  <h4 className="font-semibold text-lg">{item.role}</h4>
+                  <p className="text-gray-300 text-sm">{item.position}</p>
+                  <p className="text-gray-400 text-xs">{item.date}</p>
                 </div>
-                {/* image 3 */}
-                <div>
-                    <a target="blank" href="https://product-list-final-project.vercel.app/">
-                        <img src={Ecommerce} alt="" className=" shadow-2xl rounded-lg hover:scale-95 transition duration-300"/>
-
-                    </a>
-
-                </div>
-                {/* image 4 */}
-                <div>
-                    <a target="blank" href="https://animal-image-slider-sand.vercel.app/">
-                        <img src={AnimalImage} alt="" className=" shadow-2xl rounded-lg hover:scale-95 transition duration-300"/>
-                        
-                    </a>
-
-                </div>
-                {/* image 5  */}
-                <div>
-                    <a target="blank" href="https://taz-calculator.vercel.app/">
-                        <img src={Calculator} alt="" className=" shadow-2xl rounded-lg hover:scale-95 transition duration-300"/>
-                        
-                    </a>
-
-                </div>
-                {/* image 6  */}
-                <div>
-                    <a target="blank" href="https://tailwind-hover.vercel.app/">
-                        <img src={TailwindHover} alt="" className=" shadow-2xl rounded-lg hover:scale-95 transition duration-300"/>
-                        
-                    </a>
-                    
-                </div>
-                {/* image */}
-                <div>
-                    <a target="blank" href="https://todo-list-git-main-tahir-zayds-projects.vercel.app/">
-                        <img src={TodoList} alt="" className=" shadow-2xl rounded-lg hover:scale-95 transition duration-300"/>
-                        
-                    </a>
-                    
-                </div>
-                {/* image 8  */}
-                <div>
-                    <a target="blank" href="https://co-workspace.vercel.app/">
-                        <img src={CoworkSpace} alt="" className=" shadow-2xl rounded-lg hover:scale-95 transition duration-300"/>
-                        
-                    </a>
-                    
-                </div>
-                {/* image 8  */}
-                <div>
-                    <a target="blank" href="https://Clipfy-omega.vercel.app/">
-                        <img src={Clipfy} alt="" className=" shadow-2xl rounded-lg hover:scale-95 transition duration-300"/>
-                        
-                    </a>
-                    
-                </div>
+              ))}
             </div>
-        </div>  
-    )
-}
-export default Work;
+          </motion.div>
+        ))}
+      </div>
+
+    </section>
+  );
+};
+
+export default ExperienceSection;
