@@ -19,7 +19,7 @@ const skills = [
   { name: "HTML", percent: 90, icon: HtmlSvg },
   { name: "Bootstrap", percent: 85, icon: BootstrapSvg },
   { name: "CSS", percent: 99, icon: CssSvg },
-  { name: "Github", percent: 89, icon: GithubSvg },
+  { name: "Github", percent: 80, icon: GithubSvg },
   { name: "Javascript", percent: 93, icon: JavascriptSvg },
   { name: "Django", percent: 93, icon: DjangoSvg },
   { name: "Wordpress", percent: 93, icon: WordpressSvg },
