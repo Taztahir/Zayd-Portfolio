@@ -33,7 +33,7 @@ import Navbar from './Navbar';
 
 function App(){
   return(
-      <div className='selection:bg-[#8750F7] selection:text-white'>
+      <div className='selection:bg-[#8750F7] sora selection:text-white'>
         <Navbar/>
         <Header/>
         <About/>

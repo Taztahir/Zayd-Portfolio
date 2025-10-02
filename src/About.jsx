@@ -81,8 +81,8 @@ const About = () => {
         {/* Left Card */}
         <div className="bg-[#12091c] border border-[#2A1454] rounded-2xl p-10 flex flex-col justify-between md:w-1/2">
           <div>
-            <h2 className="text-4xl font-extrabold leading-snug text-[#8750F7]">
-              Achievements in my <br /> professional life.
+            <h2 className="md:text-4xl text-3xl font-extrabold leading-snug text-[#8750F7]">
+              Achievements in my <br className="max-md:hidden"/> professional life.
             </h2>
             <p className="mt-6 text-gray-300 leading-relaxed">
               Since beginning my journey as a freelance designer nearly 2 years ago, 

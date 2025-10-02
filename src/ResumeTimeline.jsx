@@ -1,109 +1,77 @@
-// ResumeTimeline.jsx
-import { FaBriefcase } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import React from "react";
+import PresentoImage from './assets/Presento.png'
 
-const experiences = [
-  {
-    title: "Frontend Training",
-    company: "Dervac HUB",
-    date: "July 2024 - December 2024",
-    description:
-      "Acquired hands-on knowledge of Front-end Development skills, delving into HTML5, CSS, TAILWIND, REACTJS and JAVASCRIPT. I also gained a solid foundation in Git and Git Hub and also gaining experience in collaborating with Team Members.",
-    side: "left",
-  },
-  // {
-  //   title: "Frontend Internship",
-  //   company: "Gravity Lab",
-  //   date: "January 2025 - till date",
-  //   description:
-  //     "Collaborated with a team of developers to build responsive user interfaces using React.js and Tailwind CSS. Gained practical experience working with REST APIs, Git version control, and debugging tools. Improved code quality through regular reviews and learned agile development practices in a real-world environment.",
-  //   side: "right",
-  // },
-  {
-    title: "Frontend Tutor",
-    company: "Dervac HUB",
-    date: "June 2025 - August 2025",
-    description:
-      "Guided beginners at YABATECH Secondary school through the fundamentals of frontend development, including HTML, CSS, JavaScript, and Tailwind CSS. Created learning materials, offered one-on-one support, and helped students build real-world projects. Improved my communication skills and deepened my understanding of core frontend concepts through teaching.",
-    side: "right",
-  },
-  {
-    title: "Frontend Developer",
-    company: "Freelancer",
-    date: "August 2025 - till date",
-    description:
-      "Worked independently with clients to design and develop responsive, user-friendly web interfaces using React.js, Tailwind CSS, Bootstrap, and JavaScript. Translated client requirements into functional websites, implemented interactive components, and ensured mobile-first design and cross-browser compatibility. Utilized Git and GitHub for version control and project collaboration. Gained experience in project management, remote communication, and delivering high-quality work within deadlines.",
-    side: "left",
-  },
-];
-
-export default function ResumeTimeline() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize(); // initial check
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+export default function Resume() {
   return (
-    <section className="bg-white py-16 px-4 overflow-hidden max-md:hidden">
-      <h1 className="text-5xl text-[#000000] text-center mb-16 comic-neue-regular">My Resume</h1>
-        <div className="text-center comic-neue-bold bg-gray-200 max-w-28 mx-auto py-1">Experience</div>
-      <div className="relative max-w-screen-xl mx-auto ">
-        {/* Vertical center line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-200 hidden md:block"></div>
+    <section id="resume" className="bg-[#0F0715] py-20 text-white">
+      <div className="max-w-6xl mx-auto">
+      {/* Title */}
+      <h2 className="text-4xl font-bold text-[#8750F7] max-md:px-10 mb-12">Recent Projects</h2>
 
-        {experiences.map((exp, index) => {
-          const isLeft = exp.side === "left";
+      {/* Project Card */}
+      <div className="bg-[#1a1329] rounded-2xl p-10 flex flex-col md:flex-row gap-10">
+        {/* Left Content */}
+        <div className="flex-1 flex flex-col justify-between">
+          <div>
+            <p className="text-[#8750F7] text-sm mb-2">Social Website</p>
+            <h3 className="text-3xl font-bold mb-4">Presento</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Project was about precision and information. That’s all. I
+              help clients achieve their marketing target
+              appeals to a website.
+            </p>
 
-          return (
-            <motion.div
-              key={index}
-              initial={!isMobile ? { opacity: 0, x: isLeft ? -100 : 100 } : false}
-              whileInView={!isMobile ? { opacity: 1, x: 0 } : false}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className={`mb-20 flex flex-col md:flex-row items-center w-full ${
-                isLeft ? "md:justify-start" : "md:justify-end"
-              }`}
-            >
-              {/* Icon on left if right-side entry */}
-              {!isLeft && (
-                <div className="bg-[#FF9000] text-white p-4 rounded-full z-10 shadow-md mx-4 order-1 md:order-none">
-                  <FaBriefcase size={24} />
-                </div>
-              )}
+            {/* Tags */}
+            <div className="flex gap-3 mb-8 flex-wrap">
+              <span className="bg-[#8750F7] px-4 py-1 rounded-full text-sm rotate-5 hover:rotate-0 duration-300 transition">
+                Branding
+              </span>
+              <span className="bg-[#8750F7] px-4 py-1 rounded-full text-sm rotate-5 hover:rotate-0 duration-300 transition">
+                Graphic Design
+              </span>
+              <span className="bg-[#8750F7] px-4 py-1 rounded-full text-sm rotate-5 hover:rotate-0 duration-300 transition">
+                User Stories
+              </span>
+            </div>
 
-              <div
-                className={`w-full md:w-1/2 px-4 md:px-0 ${
-                  isLeft ? "md:pr-10 text-right" : "md:pl-10 text-left"
-                }`}
-              >
-                <h3 className="text-3xl comic-neue-bold ">{exp.title}</h3>
-                <p className="text-gray-400 comic-neue-regular">
-                  {exp.company} - {exp.date}
-                </p>
-                <p className="mt-4 comic-neue-regular text-lg text-gray-700">{exp.description}</p>
-              </div>
+            {/* Testimonial */}
+            <blockquote className="italic text-gray-300 mb-6">
+              “The service was excellent. Template example is the next killer app.”
+            </blockquote>
+          </div>
 
-              {/* Icon on right if left-side entry */}
-              {isLeft && (
-                <div className="bg-[#FF9000] text-white p-4 rounded-full z-10 shadow-md mx-4">
-                  <FaBriefcase size={24} />
-                </div>
-              )}
-            </motion.div>
-          );
-        })}
+          {/* Author */}
+          <div className="flex items-center gap-3 mt-4">
+            <img
+              src="https://i.pravatar.cc/50?img=3"
+              alt="author"
+              className="w-10 h-10 rounded-full "
+            />
+            <div>
+              <p className="font-semibold text-white">Jeremy Doughlas</p>
+              <p className="text-sm text-gray-400">UI & UX designer</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Image Preview */}
+        <div className="md:flex bg-gray-800 p-4 rounded-xl justify-center md:space-x-6 items-center">
+          <div className="shadow-lg">
+            <img
+              src={PresentoImage}
+              alt="Project Preview"
+              className=" h-[500px] w-full object-cover"
+            />
+          </div>
+          <div className="shadow-lg max-md:hidden">
+            <img
+              src={PresentoImage}
+              alt="Project Preview"
+              className=" h-[500px] w-full object-cover"
+            />
+          </div>
+        </div>
       </div>
-      <div>
-
       </div>
     </section>
   );
