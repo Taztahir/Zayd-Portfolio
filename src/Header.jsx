@@ -20,7 +20,7 @@ export default function Header() {
     >
       {/* Main Card */}
       <motion.div
-        className="bg-[#140C1C] border border-[#2A1454] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 max-w-6xl w-full"
+        className="bg-[#140C1C] border border-[#2A1454] rounded-2xl p-8 md:p-20 flex flex-col md:flex-row items-center gap-10 max-w-6xl w-full"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}

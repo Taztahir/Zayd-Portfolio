@@ -1,14 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import ReactSvg from './assets/react.svg'
+import HtmlSvg from './assets/HTML.svg'
+import BootstapSvg from './assets/Bootstrap.svg'
+import CssSvg from './assets/CSS.svg'
+import GithubSvg from './assets/Github.svg'
+import JavascriptSvg from './assets/javascript.svg'
+import DjangoSvg from './assets/Django.svg'
+import WordpressSvg from './assets/Wordpress.svg'
+import ReactNativeSvg from './assets/react.svg'
+import PythonSvg from './assets/Python.svg'
+
 
 /* === Skills data (replace icon paths) === */
 const skills = [
-  { name: "HTML", percent: 92, icon: "/icons/html5.svg" },
-  { name: "CSS3", percent: 80, icon: "/icons/css3.svg" },
-  { name: "Javascript", percent: 85, icon: "/icons/js.svg" },
-  { name: "Webflow", percent: 99, icon: "/icons/webflow.svg" },
-  { name: "ReactJS", percent: 89, icon: "/icons/react.svg" },
-  { name: "Framer", percent: 93, icon: "/icons/framer.svg" },
+  { name: "React", percent: 80, icon: ReactSvg },
+  { name: "HTML", percent: 90, icon: HtmlSvg },
+  { name: "Bootstrap", percent: 85, icon: BootstapSvg },
+  { name: "CSS", percent: 99, icon: CssSvg },
+  { name: "Github", percent: 89, icon: GithubSvg },
+  { name: "Javascript", percent: 93, icon: JavascriptSvg },
+  { name: "Django", percent: 93, icon: DjangoSvg },
+  { name: "Wordpress", percent: 93, icon: WordpressSvg },
+  { name: "ReactNative", percent: 60, icon: ReactNativeSvg },
+  { name: "Python", percent: 70, icon: PythonSvg }
 ];
 
 /* === Smooth CountUp component (uses requestAnimationFrame) === */
@@ -113,7 +128,7 @@ const SkillsSection = () => {
           inspires you and your customers.
         </motion.p>
 
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="mt-12 grid grid-cols-2 justify-center items-center sm:grid-cols-3 lg:grid-cols-5 gap-6">
           {skills.map((s, i) => (
             <SkillCard key={s.name} skill={s} index={i} />
           ))}
