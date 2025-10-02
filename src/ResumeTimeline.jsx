@@ -1,5 +1,6 @@
 import React from "react";
 import PresentoImage from './assets/Presento.png'
+import ProfileImage from './assets/profile.svg'
 
 export default function Resume() {
   return (
@@ -18,7 +19,7 @@ export default function Resume() {
             <p className="text-gray-300 mb-6 leading-relaxed">
               Project was about precision and information. That’s all. I
               help clients achieve their marketing target
-              appeals to a website.
+              create website that’s appealing.
             </p>
 
             {/* Tags */}
@@ -43,13 +44,13 @@ export default function Resume() {
           {/* Author */}
           <div className="flex items-center gap-3 mt-4">
             <img
-              src="https://i.pravatar.cc/50?img=3"
+              src={ProfileImage}
               alt="author"
               className="w-10 h-10 rounded-full "
             />
             <div>
-              <p className="font-semibold text-white">Jeremy Doughlas</p>
-              <p className="text-sm text-gray-400">UI & UX designer</p>
+              <p className="font-semibold text-white">Tahir Zayd</p>
+              <p className="text-sm text-gray-400">Web Developer</p>
             </div>
           </div>
         </div>
