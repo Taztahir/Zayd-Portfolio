@@ -1,6 +1,24 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
+
+/* === Skills data === */
+const skills = [
+  { name: "HTML", percent: 70, icon: "https://cdn.simpleicons.org/html5/E34F26"},
+  { name: "TailwindCSS", percent: 70, icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4"},
+  { name: "Bootstrap", percent: 85, icon: "https://cdn.simpleicons.org/bootstrap/7952B3" },
+  { name: "CSS", percent: 99, icon: "https://cdn.simpleicons.org/css/663399" },
+  { name: "Github", percent: 80, icon: "https://cdn.simpleicons.org/github/181717" },
+  { name: "JavaScript", percent: 70, icon: "https://cdn.simpleicons.org/javascript/F7DF1E"},
+  { name: "Vercel", percent: 80, icon: "https://cdn.simpleicons.org/vercel/000000" },
+  { name: "React", percent: 93, icon: "https://cdn.simpleicons.org/react/61DAFB" },
+  { name: "Django", percent: 93, icon: "https://cdn.simpleicons.org/django/092E20" },
+  { name: "Wordpress", percent: 93, icon: "https://cdn.simpleicons.org/wordpress/21759B" },
+  { name: "Python", percent: 70, icon: "https://cdn.simpleicons.org/python/3776AB"},
+  { name: "ReactNative", percent: 70, icon: "https://cdn.simpleicons.org/react/61DAFB"},
+
+];
+
 /* === Optimized CountUp hook (updates ~30fps instead of 60fps) === */
 const useCountUp = (target, isVisible, duration = 1200, fps = 30) => {
   const [value, setValue] = useState(0);
