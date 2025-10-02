@@ -6,14 +6,19 @@ const sections = [
     title: "EDUCATION",
     items: [
       {
-        role: "BA IN DESIGN",
-        position: "Product Designer",
-        date: "January 2024 - Present",
+        role: "Dervac Hub",
+        position: "Frontend Development",
+        date: "July 2023 - December 2023",
       },
       {
-        role: "UX/UI DESIGN SCHOOL",
-        position: "Product Designer",
-        date: "April 2024 - Present",
+        role: "Udemy",
+        position: "Backend Development",
+        date: "January 2024 - April 2024",
+      },
+      {
+        role: "Udemy",
+        position: "Mobile Development",
+        date: "April 2024 - August 2024",
       },
     ],
   },
@@ -21,47 +26,42 @@ const sections = [
     title: "EXPERIENCE",
     items: [
       {
-        role: "LION PARCEL",
-        position: "Product Designer",
-        date: "February 2024 - Present",
+        role: "GravityLab",
+        position: "Internship",
+        date: "January 2024 - december 2024",
+      },
+       {
+        role: "Dervac Hub",
+        position: "Frontend Tutor",
+        date: "June 2025 - August 2025",
       },
       {
-        role: "ENVER STUDIO",
-        position: "Product Designer",
-        date: "May 2024 - Present",
-      },
-      {
-        role: "TOKO DISTRIBUTOR",
-        position: "Product Designer",
-        date: "March 2024 - Present",
-      },
-      {
-        role: "SAKOO",
-        position: "Product Designer",
-        date: "June 2024 - Present",
+        role: "Freelancer",
+        position: "FullStack Developer",
+        date: "September 2025 - Date",
       },
     ],
   },
-  {
-    title: "PAST ROLES",
-    items: [
-      {
-        role: "LION PARCEL",
-        position: "Product Designer",
-        date: "February 2024 - Present",
-      },
-      {
-        role: "ENVER STUDIO",
-        position: "Product Designer",
-        date: "May 2024 - Present",
-      },
-      {
-        role: "TOKO DISTRIBUTOR",
-        position: "Product Designer",
-        date: "March 2024 - Present",
-      },
-    ],
-  },
+//   {
+//     title: "PAST ROLES",
+//     items: [
+//       {
+//         role: "LION PARCEL",
+//         position: "Product Designer",
+//         date: "February 2024 - Present",
+//       },
+//       {
+//         role: "ENVER STUDIO",
+//         position: "Product Designer",
+//         date: "May 2024 - Present",
+//       },
+//       {
+//         role: "TOKO DISTRIBUTOR",
+//         position: "Product Designer",
+//         date: "March 2024 - Present",
+//       },
+//     ],
+//   },
 ];
 
 const ExperienceSection = () => {
@@ -77,7 +77,7 @@ const ExperienceSection = () => {
         <span className="text-[#8750F7]">Education</span> & Work Experience
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {sections.map((section, i) => (
           <motion.div
             key={i}

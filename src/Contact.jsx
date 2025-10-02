@@ -121,6 +121,13 @@ const ContactSection = () => {
             >
               <FaWhatsapp />
             </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              href="#"
+              className="text-2xl hover:text-[#8750F7]"
+            >
+              <FaLinkedin />
+            </motion.a>
           </div>
         </motion.div>
       </div>
