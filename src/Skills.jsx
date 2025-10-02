@@ -1,22 +1,23 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import ReactSvg from './assets/react.svg'
-import HtmlSvg from './assets/HTML.svg'
-import BootstapSvg from './assets/Bootstrap.svg'
-import CssSvg from './assets/CSS.svg'
-import GithubSvg from './assets/Github.svg'
+import HtmlSvg from './assets/html.svg'
+import BootstrapSvg from './assets/bootstrap.svg'
+import CssSvg from './assets/css.svg'
+import GithubSvg from './assets/github.svg'
 import JavascriptSvg from './assets/javascript.svg'
-import DjangoSvg from './assets/Django.svg'
-import WordpressSvg from './assets/Wordpress.svg'
+import DjangoSvg from './assets/django.svg'
+import WordpressSvg from './assets/wordpress.svg'
 import ReactNativeSvg from './assets/react.svg'
-import PythonSvg from './assets/Python.svg'
+import PythonSvg from './assets/python.svg'
+
 
 
 /* === Skills data (replace icon paths) === */
 const skills = [
   { name: "React", percent: 80, icon: ReactSvg },
   { name: "HTML", percent: 90, icon: HtmlSvg },
-  { name: "Bootstrap", percent: 85, icon: BootstapSvg },
+  { name: "Bootstrap", percent: 85, icon: BootstrapSvg },
   { name: "CSS", percent: 99, icon: CssSvg },
   { name: "Github", percent: 89, icon: GithubSvg },
   { name: "Javascript", percent: 93, icon: JavascriptSvg },
