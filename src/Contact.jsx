@@ -23,6 +23,7 @@ const ContactSection = () => {
             <div>
               <input
                 type="text"
+                name="First name"
                 required
                 placeholder="First name"
                 className="w-full bg-transparent border-b px-3 border-gray-600 focus:border-[#8750F7] outline-none py-2"
@@ -31,6 +32,7 @@ const ContactSection = () => {
             <div>
               <input
                 type="text"
+                name="Last Name"
                 required
                 placeholder="Last name"
                 className="w-full bg-transparent border-b px-3 border-gray-600 focus:border-[#8750F7] outline-none py-2"
@@ -39,6 +41,7 @@ const ContactSection = () => {
             <div>
               <input
                 type="email"
+                name="email"
                 required
                 placeholder="Email address"
                 className="w-full bg-transparent border-b px-3 border-gray-600 focus:border-[#8750F7] outline-none py-2"
@@ -46,7 +49,8 @@ const ContactSection = () => {
             </div>
             <div>
               <input
-                type="tel"
+                type="number"
+                name="tel"
                 required
                 placeholder="Phone number"
                 className="w-full bg-transparent border-b px-3 border-gray-600 focus:border-[#8750F7] outline-none py-2"
@@ -55,6 +59,7 @@ const ContactSection = () => {
             <div>
               <textarea
               required
+              name="message"
                 placeholder="Message"
                 className="w-full bg-transparent border-b px-3 border-gray-600 focus:border-[#8750F7] outline-none py-2 h-28"
               ></textarea>
