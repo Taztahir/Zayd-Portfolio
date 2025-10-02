@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
-// ✅ all lowercase filenames
-import ReactSvg from './assets/react.svg';
+// import ReactSvg from './assets/react.svg';
 import HtmlSvg from './assets/html.svg';
 import TailwindSvg from './assets/tailwindcss.svg';
 import BootstrapSvg from './assets/bootstrap.svg';
@@ -12,12 +11,12 @@ import VercelSvg from './assets/vercel.svg';
 import JavaScriptSvg from './assets/javascript.svg';
 import DjangoSvg from './assets/django.svg';
 import WordpressSvg from './assets/wordpress.svg';
-import ReactNativeSvg from './assets/react.svg';
+// import ReactNativeSvg from './assets/react.svg';
 import PythonSvg from './assets/python.svg';
 
 /* === Skills data === */
 const skills = [
-  { name: "React", percent: 80, icon: ReactSvg },
+  // { name: "React", percent: 80, icon: ReactSvg },
   { name: "HTML", percent: 90, icon: HtmlSvg },
   { name: "Tailwindcss", percent: 90, icon: TailwindSvg },
   { name: "Bootstrap", percent: 85, icon: BootstrapSvg },
@@ -27,7 +26,7 @@ const skills = [
   { name: "Javascript", percent: 93, icon: JavaScriptSvg },
   { name: "Django", percent: 93, icon: DjangoSvg },
   { name: "Wordpress", percent: 93, icon: WordpressSvg },
-  { name: "ReactNative", percent: 60, icon: ReactNativeSvg },
+  // { name: "ReactNative", percent: 60, icon: ReactNativeSvg },
   { name: "Python", percent: 70, icon: PythonSvg }
 ];
 
