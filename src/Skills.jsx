@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import ReactSvg from './assets/react.svg'
-import HtmlSvg from './assets/HTML.svg'
+import HtmlSvg from './assets/html.svg'
 import BootstrapSvg from './assets/bootstrap.svg'
 import CssSvg from './assets/css.svg'
 import GithubSvg from './assets/github.svg'
 import JavascriptSvg from './assets/javascript.svg'
 import DjangoSvg from './assets/django.svg'
 import WordpressSvg from './assets/wordpress.svg'
-import ReactNativeSvg from './assets/react.svg'
 import PythonSvg from './assets/python.svg'
+
 
 
 
@@ -23,7 +23,7 @@ const skills = [
   { name: "Javascript", percent: 93, icon: JavascriptSvg },
   { name: "Django", percent: 93, icon: DjangoSvg },
   { name: "Wordpress", percent: 93, icon: WordpressSvg },
-  { name: "ReactNative", percent: 60, icon: ReactNativeSvg },
+  { name: "ReactNative", percent: 60, icon: ReactSvg },
   { name: "Python", percent: 70, icon: PythonSvg }
 ];
 
