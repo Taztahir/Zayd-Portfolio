@@ -6,9 +6,10 @@ import ClipfyImage2 from './assets/Runspadi.png'
 
 
 // Reusable Project Card for grid projects
-const ProjectCard = ({ image, category, title, description, tags }) => {
+const ProjectCard = ({ image, category, title, description, tags, links }) => {
   return (
     <div className="bg-[#1a1329] border border-purple-900 rounded-2xl p-6 flex flex-col hover:scale-[1.02] transition duration-300">
+      <a href={links} target="blank">
       {/* Image */}
       <div className="rounded-xl bg-[#10171C] flex justify-center p-5 items-center mb-6 overflow-hidden">
         <img src={image} alt={title} className="lg:size-90" />
@@ -34,6 +35,7 @@ const ProjectCard = ({ image, category, title, description, tags }) => {
           </span>
         ))}
       </div>
+      </a>
     </div>
   );
 };
@@ -46,6 +48,7 @@ export default function RecentProjects() {
       title: "Clipfy",
       description: "Project was about precision and information. That’s all.",
       tags: ["HTML", "React", "TailwindCSS", "JavaScript", "Firebase", "Firestore"],
+      links: "https://clipfy-omega.vercel.app/"
     },
     {
       image: ClipfyImage2, 
@@ -53,6 +56,7 @@ export default function RecentProjects() {
       title: "Runspadi",
       description: "Project was about precision and information. That’s all.",
       tags: ["HTML", "React", "TailwindCSS", "JavaScript"],
+      links: "https://runspadi.vercel.app/"
     },
   ];
 
@@ -114,18 +118,22 @@ export default function RecentProjects() {
           {/* Right Image Preview */}
           <div className="md:flex bg-gray-800 p-4 rounded-xl justify-center md:space-x-6 items-center">
             <div className="shadow-lg">
+              <a href="https://presento-lovat.vercel.app/">
               <img
                 src={PresentoImage}
                 alt="Project Preview"
                 className="h-[500px] w-full object-cover"
               />
+              </a>
             </div>
             <div className="shadow-lg max-md:hidden">
+              <a href="https://presento-lovat.vercel.app/">
               <img
                 src={PresentoImage}
                 alt="Project Preview"
                 className="h-[500px] w-full object-cover"
               />
+              </a>
             </div>
           </div>
         </div>
