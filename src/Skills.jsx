@@ -8,7 +8,9 @@ import GithubSvg from './assets/github.svg'
 import JavascriptSvg from './assets/javascript.svg'
 import DjangoSvg from './assets/django.svg'
 import WordpressSvg from './assets/wordpress.svg'
+import ReactNativeSvg from './assets/react.svg'
 import PythonSvg from './assets/python.svg'
+
 
 
 
@@ -23,7 +25,7 @@ const skills = [
   { name: "Javascript", percent: 93, icon: JavascriptSvg },
   { name: "Django", percent: 93, icon: DjangoSvg },
   { name: "Wordpress", percent: 93, icon: WordpressSvg },
-  { name: "ReactNative", percent: 60, icon: ReactSvg },
+  { name: "ReactNative", percent: 60, icon: ReactNativeSvg },
   { name: "Python", percent: 70, icon: PythonSvg }
 ];
 
