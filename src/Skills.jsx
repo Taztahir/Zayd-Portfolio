@@ -10,7 +10,11 @@ import DjangoSvg from './assets/django.svg'
 import WordpressSvg from './assets/wordpress.svg'
 import ReactNativeSvg from './assets/react.svg'
 import PythonSvg from './assets/python.svg'
-// import VercelSvg from './assets/vercel.svg'
+import VercelSvg from './assets/vercel.svg'
+import HtmlSvg from './assets/Html.svg'
+import TailwindSvg from './assets/Tailwindcss.svg'
+
+
 
 
 
@@ -19,11 +23,12 @@ import PythonSvg from './assets/python.svg'
 /* === Skills data (replace icon paths) === */
 const skills = [
   { name: "React", percent: 80, icon: ReactSvg },
-  { name: "HTML", percent: 90, icon: TailwindcssSvg },
+  { name: "HTML", percent: 90, icon: HtmlSvg },
+  { name: "Tailwindcss", percent: 90, icon: TailwindSvg },
   { name: "Bootstrap", percent: 85, icon: BootstrapSvg },
   { name: "CSS", percent: 99, icon: CssSvg },
   { name: "Github", percent: 80, icon: GithubSvg },
-  // { name: "Vercel", percent: 80, icon: VercelSvg },
+  { name: "Vercel", percent: 80, icon: VercelSvg },
   { name: "Javascript", percent: 93, icon: JavascriptSvg },
   { name: "Django", percent: 93, icon: DjangoSvg },
   { name: "Wordpress", percent: 93, icon: WordpressSvg },
