@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import ReactSvg from './assets/react.svg'
-import TailwindcssSvg from './assets/Tailwindcss.svg'
 import BootstrapSvg from './assets/bootstrap.svg'
 import CssSvg from './assets/css.svg'
 import GithubSvg from './assets/github.svg'
@@ -13,10 +12,6 @@ import PythonSvg from './assets/python.svg'
 import VercelSvg from './assets/vercel.svg'
 import HtmlSvg from './assets/Html.svg'
 import TailwindSvg from './assets/Tailwindcss.svg'
-
-
-
-
 
 
 
