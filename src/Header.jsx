@@ -1,16 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Twitter, Linkedin, Github } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa"; // WhatsApp icon
+import { FaWhatsapp } from "react-icons/fa"; 
 import Profile from "./assets/profile.svg";
 
 export default function Header() {
   // Social links with icons
   const socialLinks = [
-    { icon: Twitter, url: "https://twitter.com/yourusername" },
+    { icon: Twitter, url: "https://x.com/taz1393177" },
     { icon: Linkedin, url: "https://linkedin.com/in/yourusername" },
     { icon: Github, url: "https://github.com/Taztahir" },
-    { icon: FaWhatsapp, url: "https://wa.me/2349060720810" }, // WhatsApp link
+    { icon: FaWhatsapp, url: "https://wa.me/2349060720810" },
   ];
 
   return (

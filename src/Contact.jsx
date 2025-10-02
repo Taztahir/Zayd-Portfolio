@@ -102,21 +102,21 @@ const ContactSection = () => {
           <div className="flex space-x-6 mt-6">
             <motion.a
               whileHover={{ scale: 1.2 }}
-              href="#"
+              href="https://x.com/taz1393177"
               className="text-2xl hover:text-[#8750F7]"
             >
               <FaTwitter />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.2 }}
-              href="#"
+              href="https://github.com/Taztahir"
               className="text-2xl hover:text-[#8750F7]"
             >
               <FaGithub />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.2 }}
-              href="#"
+              href="https://wa.me/2349060720810"
               className="text-2xl hover:text-[#8750F7]"
             >
               <FaWhatsapp />

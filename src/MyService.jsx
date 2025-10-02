@@ -22,6 +22,9 @@ export default function Specialization() {
 
   return (
     <section id="service" className="bg-[#0F0715] py-20 px-6 md:px-20">
+        <div className="max-w-6xl mx-auto">
+
+        
       {/* Heading */}
       <motion.h2
         className="text-4xl md:text-5xl font-bold text-[#8750F7] mb-10"
@@ -68,6 +71,7 @@ export default function Specialization() {
             
           </motion.div>
         ))}
+      </div>
       </div>
     </section>
   );
