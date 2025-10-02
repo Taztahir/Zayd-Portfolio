@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import ReactSvg from './assets/react.svg'
-import HtmlSvg from './assets/html.svg'
+import HtmlSvg from './assets/HTML.svg'
 import BootstrapSvg from './assets/bootstrap.svg'
 import CssSvg from './assets/css.svg'
 import GithubSvg from './assets/github.svg'
