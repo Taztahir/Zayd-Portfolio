@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
-// import ReactSvg from './assets/react.svg';
-// import HtmlSvg from './assets/html.svg';
-// import TailwindSvg from './assets/tailwindcss.svg';
 import BootstrapSvg from './assets/bootstrap.svg';
 import CssSvg from './assets/css.svg';
 import GithubSvg from './assets/github.svg';
@@ -11,14 +8,10 @@ import VercelSvg from './assets/vercel.svg';
 import JavaScriptSvg from './assets/javascript.svg';
 import DjangoSvg from './assets/django.svg';
 import WordpressSvg from './assets/wordpress.svg';
-// import ReactNativeSvg from './assets/react.svg';
 import PythonSvg from './assets/python.svg';
 
 /* === Skills data === */
 const skills = [
-  // { name: "React", percent: 80, icon: ReactSvg },
-  // { name: "HTML", percent: 90, icon: HtmlSvg },
-  // { name: "Tailwindcss", percent: 90, icon: TailwindSvg },
   { name: "Bootstrap", percent: 85, icon: BootstrapSvg },
   { name: "CSS", percent: 99, icon: CssSvg },
   { name: "Github", percent: 80, icon: GithubSvg },
@@ -26,16 +19,14 @@ const skills = [
   { name: "Javascript", percent: 93, icon: JavaScriptSvg },
   { name: "Django", percent: 93, icon: DjangoSvg },
   { name: "Wordpress", percent: 93, icon: WordpressSvg },
-  // { name: "ReactNative", percent: 60, icon: ReactNativeSvg },
   { name: "Python", percent: 70, icon: PythonSvg }
 ];
 
-
-/* === Smooth CountUp component (uses requestAnimationFrame) === */
-const CountUp = ({ target, isVisible, duration = 1200 }) => {
+/* === Optimized CountUp hook (updates ~30fps instead of 60fps) === */
+const useCountUp = (target, isVisible, duration = 1200, fps = 30) => {
   const [value, setValue] = useState(0);
-  const rafRef = useRef(null);
   const startRef = useRef(null);
+  const rafRef = useRef(null);
 
   useEffect(() => {
     if (!isVisible) return;
@@ -44,13 +35,13 @@ const CountUp = ({ target, isVisible, duration = 1200 }) => {
       if (!startRef.current) startRef.current = timestamp;
       const elapsed = timestamp - startRef.current;
       const progress = Math.min(elapsed / duration, 1);
-      const current = Math.round(progress * target);
-      setValue(current);
+      setValue(Math.round(progress * target));
 
       if (progress < 1) {
-        rafRef.current = requestAnimationFrame(step);
-      } else {
-        setValue(target); // final exact value
+        rafRef.current = setTimeout(
+          () => requestAnimationFrame(step),
+          1000 / fps
+        );
       }
     };
 
@@ -60,14 +51,20 @@ const CountUp = ({ target, isVisible, duration = 1200 }) => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       startRef.current = null;
     };
-  }, [isVisible, target, duration]);
+  }, [isVisible, target, duration, fps]);
 
+  return value;
+};
+
+/* === CountUp component === */
+const CountUp = ({ target, isVisible, duration = 1200 }) => {
+  const value = useCountUp(target, isVisible, duration, 30);
   return (
     <span className="mt-4 text-gray-200 text-lg font-semibold">{value}%</span>
   );
 };
 
-/* === Single skill card that detects its own visibility === */
+/* === Single skill card === */
 const SkillCard = ({ skill, index }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.45 });
@@ -77,26 +74,25 @@ const SkillCard = ({ skill, index }) => {
       ref={ref}
       initial={{ opacity: 0, y: 18, scale: 0.98 }}
       animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-      transition={{ duration: 0.55, delay: index * 0.12 }}
+      transition={{ duration: 0.55, delay: index * 0.18 }} // slightly larger stagger
       className="bg-[#12091c] border border-[#2A1454] rounded-2xl p-6 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2"
     >
-      {/* Icon with dimmed → clear hover */}
       <motion.img
         src={skill.icon}
         alt={skill.name}
-        initial={{ scale: 0.85, opacity: 0.4 }}              // dim on load
-        animate={inView ? { scale: 1, opacity: 0.6 } : {}}   // slightly dim in view
-        whileHover={{ opacity: 1 }}                          // clear on hover
+        initial={{ scale: 0.85, opacity: 0.4 }}
+        animate={inView ? { scale: 1, opacity: 0.6 } : {}}
+        whileHover={{ opacity: 1 }}
         transition={{
           type: "spring",
           stiffness: 140,
           damping: 16,
-          delay: index * 0.12,
+          delay: index * 0.18,
         }}
         className="w-16 h-16 object-contain transition-opacity duration-300"
       />
 
-      {/* CountUp starts only when card is in view */}
+      {/* CountUp starts when card is visible */}
       <CountUp target={skill.percent} isVisible={inView} duration={1200} />
 
       <span className="mt-2 text-sm text-gray-400">{skill.name}</span>
@@ -129,8 +125,8 @@ const SkillsSection = () => {
           viewport={{ once: true }}
           className="mt-4 text-gray-300 max-w-2xl mx-auto"
         >
-          We put your ideas and thus your wishes in the form of a unique web project that
-          inspires you and your customers.
+          We put your ideas and thus your wishes in the form of a unique web
+          project that inspires you and your customers.
         </motion.p>
 
         <div className="mt-12 grid grid-cols-2 justify-center items-center sm:grid-cols-3 lg:grid-cols-5 gap-6">
