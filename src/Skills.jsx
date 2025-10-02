@@ -1,27 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
-import BootstrapSvg from './assets/bootstrap.svg';
-import CssSvg from './assets/css.svg';
-import GithubSvg from './assets/github.svg';
-import VercelSvg from './assets/vercel.svg';
-import JavaScriptSvg from './assets/javascript.svg';
-import DjangoSvg from './assets/django.svg';
-import WordpressSvg from './assets/wordpress.svg';
-import PythonSvg from './assets/python.svg';
-
-/* === Skills data === */
-const skills = [
-  { name: "Bootstrap", percent: 85, icon: BootstrapSvg },
-  { name: "CSS", percent: 99, icon: CssSvg },
-  { name: "Github", percent: 80, icon: GithubSvg },
-  { name: "Vercel", percent: 80, icon: VercelSvg },
-  { name: "Javascript", percent: 93, icon: JavaScriptSvg },
-  { name: "Django", percent: 93, icon: DjangoSvg },
-  { name: "Wordpress", percent: 93, icon: WordpressSvg },
-  { name: "Python", percent: 70, icon: PythonSvg }
-];
-
 /* === Optimized CountUp hook (updates ~30fps instead of 60fps) === */
 const useCountUp = (target, isVisible, duration = 1200, fps = 30) => {
   const [value, setValue] = useState(0);
