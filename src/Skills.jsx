@@ -10,6 +10,7 @@ import DjangoSvg from './assets/django.svg'
 import WordpressSvg from './assets/wordpress.svg'
 import ReactNativeSvg from './assets/react.svg'
 import PythonSvg from './assets/python.svg'
+import VercelSvg from './assets/vercel.svg'
 
 
 
@@ -22,6 +23,7 @@ const skills = [
   { name: "Bootstrap", percent: 85, icon: BootstrapSvg },
   { name: "CSS", percent: 99, icon: CssSvg },
   { name: "Github", percent: 80, icon: GithubSvg },
+  { name: "Vercel", percent: 80, icon: VercelSvg },
   { name: "Javascript", percent: 93, icon: JavascriptSvg },
   { name: "Django", percent: 93, icon: DjangoSvg },
   { name: "Wordpress", percent: 93, icon: WordpressSvg },
