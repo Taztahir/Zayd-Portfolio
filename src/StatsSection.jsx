@@ -3,7 +3,7 @@ import { Trophy, Briefcase, Grid, Crown } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 
 const statsData = [
-  { icon: <Trophy size={40} className="text-[#8750F7]" />, value: 14, suffix: "%", label: "Job achievements" },
+  { icon: <Trophy size={40} className="text-[#8750F7]" />, value: 80, suffix: "%", label: "Job achievements" },
   { icon: <Briefcase size={40} className="text-[#8750F7]" />, value: 2, suffix: "+", label: "Years of Experience" },
   { icon: <Grid size={40} className="text-[#8750F7]" />, value: 15, suffix: "+", label: "Happy Clients" },
   { icon: <Crown size={40} className="text-[#8750F7]" />, value: 14, suffix: "+", label: "Project Completed" },
