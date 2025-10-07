@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Download } from "lucide-react";
+
 
 const Navbar = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -42,7 +44,7 @@ const Navbar = () => {
   return (
     <nav
       className={` nunito ${
-        scrolled ? "bg-black backdrop-blur-md fixed w-full top-0 left-0 z-50 transition-all duration-300 shadow-lg border-gray-100" : "bg-[#0F0715] text-white"
+        scrolled ? "bg-black backdrop-blur-md fixed items-center w-full top-0 left-0 z-50 transition-all duration-300 shadow-lg border-gray-100" : "bg-[#0F0715] text-white"
       }`}
     >
       <div className="lg:max-w-6xl max-md:px-6 lg:px-6 max-lg:max-w-2xl mx-auto py-5 flex justify-between items-center">
@@ -55,7 +57,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex space-x-5">
+        <ul className="hidden lg:flex items-center space-x-5">
           {navItems.map((item) => (
             <li key={item.id}>
               <a
@@ -71,12 +73,14 @@ const Navbar = () => {
             </li>
           ))}
           {/* Get Started Button (desktop only) */}
-        <div className="hidden lg:block hover:scale-95 transition-transform duration-300">
+        <div className="hidden lg:inline hover:scale-95 transition-transform duration-300">
           <a
-            href="#gallery"
-            className="text-sm barlow-regular shadow-white bg-[#8750F7] border-2 duration-300 transition hover:bg-white hover:text-black rounded-full border-[#8750F7] text-white px-7 py-3 font-semibold"
+            href="/TazTahirResume.pdf"
+            download="TazTahirResume.pdf"
+            className="text-sm flex space-x-2 items-center barlow-regular shadow-white bg-[#8750F7] border-2 duration-300 transition hover:bg-white hover:text-black rounded-full border-[#8750F7] text-white px-7 py-3 font-semibold"
           >
-            Resume
+            <span>Resume</span>
+            <Download size={13} className=""/>
           </a>
         </div>
         </ul>
@@ -113,7 +117,8 @@ const Navbar = () => {
             ))}
             <li>
               <a
-                href=""
+                href="./TazTahirResume.pdf"
+                download="TazTahirResume.pdf"
                 onClick={() => setIsOpen(false)}
                 className="block text-center w-fit rounded-full mx-auto bg-[#8750F7] text-white px-7 py-3 font-semibold"
               >
