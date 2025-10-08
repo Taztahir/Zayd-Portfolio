@@ -21,7 +21,7 @@ const ProjectCard = ({ image, category, title, description, tags, links }) => {
       <a href={links} target="blank">
         {/* Image */}
         <div className="rounded-xl bg-[#10171C] flex justify-center p-5 items-center mb-6 overflow-hidden">
-          <img src={image} alt={title} className="lg:size-90" />
+          <img src={image} alt={title} className="lg:size-99" />
         </div>
 
         {/* Category */}
@@ -65,7 +65,7 @@ export default function RecentProjects() {
       title: "Runspadi",
       description: "Project was about precision and information. That’s all.",
       tags: ["HTML", "React", "TailwindCSS", "JavaScript"],
-      links: "https://runspadi.vercel.app/",
+      links: "https://runspadi-ygam.vercel.app/",
     },
   ];
 
