@@ -31,8 +31,13 @@ const sections = [
         date: "January 2024 - december 2024",
       },
        {
-        role: "Dervac Hub",
+        role: "Yaba College of Technology",
         position: "Frontend Tutor",
+        date: "June 2025 - August 2025",
+      },
+      {
+        role: "Dervac Hub",
+        position: "Frontend Tutor & developer",
         date: "June 2025 - August 2025",
       },
       {
