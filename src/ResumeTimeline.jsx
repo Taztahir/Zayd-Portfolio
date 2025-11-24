@@ -156,7 +156,7 @@ export default function RecentProjects() {
             viewport={{ once: true }}
           >
             <div className="shadow-lg">
-              <a href="https://presento-lovat.vercel.app/">
+              <a href="https://tym-camp-platform.vercel.app/">
                 <img
                   src={TymcampImage2}
                   alt="Project Preview"
@@ -165,7 +165,7 @@ export default function RecentProjects() {
               </a>
             </div>
             <div className="shadow-lg max-md:hidden">
-              <a href="https://presento-lovat.vercel.app/">
+              <a href="https://tym-camp-platform.vercel.app/">
                 <img
                   src={TymcampImage}
                   alt="Project Preview"
