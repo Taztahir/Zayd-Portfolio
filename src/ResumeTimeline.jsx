@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import TymcampImage from "./assets/Tym-camp1.png";
+import TymcampImage2 from "./assets/Tym-camp2.png";
 import PresentoImage from "./assets/Presento.png";
 import ProfileImage from "./assets/profile.svg";
 import ClipfyImage1 from "./assets/Clipfy1.png";
@@ -65,7 +67,7 @@ export default function RecentProjects() {
       title: "Runspadi",
       description: "Project was about precision and information. That’s all.",
       tags: ["HTML", "React", "TailwindCSS", "JavaScript"],
-      links: "https://runspadi-ygam.vercel.app/",
+      links: "https://runspadi-ygam.vercel.app/ ",
     },
   ];
 
@@ -95,7 +97,7 @@ export default function RecentProjects() {
           <div className="flex-1 flex flex-col justify-between">
             <div>
               <p className="text-[#8750F7] text-sm mb-2">Social Website</p>
-              <h3 className="text-3xl font-bold mb-4">Presento</h3>
+              <h3 className="text-3xl font-bold mb-4">Tym Camp Platform</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Project was about precision and information. That’s all. I help
                 clients achieve their marketing target and create a website
@@ -112,6 +114,15 @@ export default function RecentProjects() {
                 </span>
                 <span className="bg-[#8750F7] px-4 py-1 rounded-full text-sm rotate-5 hover:rotate-0 transition">
                   TailwindCSS
+                </span>
+                <span className="bg-[#8750F7] px-4 py-1 rounded-full text-sm rotate-5 hover:rotate-0 transition">
+                  TypeScript
+                </span>
+                <span className="bg-[#8750F7] px-4 py-1 rounded-full text-sm rotate-5 hover:rotate-0 transition">
+                  Firebase
+                </span>
+                <span className="bg-[#8750F7] px-4 py-1 rounded-full text-sm rotate-5 hover:rotate-0 transition">
+                  PayStack
                 </span>
               </div>
 
@@ -147,18 +158,18 @@ export default function RecentProjects() {
             <div className="shadow-lg">
               <a href="https://presento-lovat.vercel.app/">
                 <img
-                  src={PresentoImage}
+                  src={TymcampImage2}
                   alt="Project Preview"
-                  className="h-[500px] w-full object-cover"
+                  className="h-[500px] lg:w-[300px] w-full object-cover"
                 />
               </a>
             </div>
             <div className="shadow-lg max-md:hidden">
               <a href="https://presento-lovat.vercel.app/">
                 <img
-                  src={PresentoImage}
+                  src={TymcampImage}
                   alt="Project Preview"
-                  className="h-[500px] w-full object-cover"
+                  className="h-[500px] lg:w-[300px] w-full object-cover"
                 />
               </a>
             </div>

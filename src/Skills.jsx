@@ -16,8 +16,10 @@ const skills = [
   { name: "Wordpress", percent: 80, icon: "https://cdn.simpleicons.org/wordpress/21759B" },
   { name: "Python", percent: 70, icon: "https://cdn.simpleicons.org/python/3776AB"},
   { name: "ReactNative", percent: 60, icon: "https://cdn.simpleicons.org/react/61DAFB"},
-  { name: "TypeScript", percent: 60, icon: "https://cdn.simpleicons.org/typescript/3178C6"},
-  { name: "NodeJs", percent: 60, icon: "https://cdn.simpleicons.org/node.js/5FA04E"},
+  { name: "TypeScript", percent: 90, icon: "https://cdn.simpleicons.org/typescript/3178C6"},
+  { name: "NodeJs", percent: 50, icon: "https://cdn.simpleicons.org/node.js/5FA04E"},
+  { name: "Firebase", percent: 80, icon: "https://cdn.simpleicons.org/firebase/DD2C00"},
+
 
 ];
 
