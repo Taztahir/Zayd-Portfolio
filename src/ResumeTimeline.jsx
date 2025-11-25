@@ -65,7 +65,7 @@ export default function RecentProjects() {
       image: ClipfyImage2,
       category: "Transport & Logistics",
       title: "Runspadi",
-      description: "Project was about precision and information. That’s all.",
+      description: "Project was built for a Transport and Logistics Company. That’s all.",
       tags: ["HTML", "React", "TailwindCSS", "JavaScript"],
       links: "https://runspadi-ygam.vercel.app/ ",
     },
@@ -96,7 +96,7 @@ export default function RecentProjects() {
           {/* Left Content */}
           <div className="flex-1 flex flex-col justify-between">
             <div>
-              <p className="text-[#8750F7] text-sm mb-2">Social Website</p>
+              <p className="text-[#8750F7] text-sm mb-2">NGO Website</p>
               <h3 className="text-3xl font-bold mb-4">Tym Camp Platform</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Project was about precision and information. That’s all. I help
