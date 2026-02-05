@@ -78,7 +78,7 @@ export default function RecentProjects() {
       title: "Sparkcode",
       description: "A high-performance educational platform for modern developers. Clean architecture and seamless UX.",
       tags: ["React", "Firebase", "Tailwind"],
-      links: "https://sparkcode-admin.vercel.app/",
+      links: "https://sparkcodeacademy.vercel.app/",
       color: "bg-primary"
     },
   ];
