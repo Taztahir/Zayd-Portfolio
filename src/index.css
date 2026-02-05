@@ -1,1 +1,80 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #FACC15;
+  /* Vivid Yellow */
+  --color-secondary: #FF006E;
+  /* Hot Pink */
+  --color-accent: #3AEE1E;
+  /* Neon Green */
+  --color-cyan-vivid: #00F5FF;
+  --color-brutal-black: #000000;
+  --color-brutal-white: #FFFFFF;
+
+  --shadow-brutal: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-brutal-lg: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-brutal-hover: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+
+  --font-sora: "Sora", sans-serif;
+  --font-mono-space: "Space Mono", monospace;
+}
+
+:root {
+  --brutal-border: 3px solid black;
+  --brutal-shadow: 4px 4px 0px 0px black;
+  --brutal-shadow-hover: 2px 2px 0px 0px black;
+}
+
+@layer base {
+
+  html,
+  body {
+    @apply overflow-x-hidden max-w-full;
+  }
+
+  body {
+    @apply bg-brutal-white text-brutal-black font-sora selection:bg-primary selection:text-black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold uppercase tracking-tight;
+  }
+}
+
+@layer components {
+  .brutal-card {
+    @apply bg-white border-[3px] border-black shadow-brutal transition-all duration-200;
+  }
+
+  .brutal-card:hover {
+    @apply shadow-brutal-hover translate-x-[2px] translate-y-[2px];
+  }
+
+  .brutal-btn {
+    @apply px-6 py-3 bg-primary border-[3px] border-black shadow-brutal font-bold uppercase transition-all active:shadow-none active:translate-x-[4px] active:translate-y-[4px];
+  }
+
+  .brutal-input {
+    @apply w-full p-4 border-[3px] border-black bg-white focus:outline-none focus:bg-cyan-vivid/10 transition-colors;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  border-left: 3px solid black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border: 2px solid white;
+}

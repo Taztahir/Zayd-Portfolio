@@ -1,135 +1,124 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-import { Download } from "lucide-react";
-
+import { Menu, X, Download } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const [activeSection, setActiveSection] = useState("hero");
+    const [isOpen, setIsOpen] = useState(false);
 
-  const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
-  const [isOpen, setIsOpen] = useState(false);
-  
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+            const sections = document.querySelectorAll("section");
+            let current = "hero";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+            setActiveSection(current);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 200);
+    const navItems = [
+        { id: "hero", label: "Home" },
+        { id: "about", label: "About" },
+        { id: "skills", label: "Skills" },
+        { id: "project", label: "Project" },
+        { id: "service", label: "Service" },
+        { id: "resume", label: "Resume" },
+        { id: "contact", label: "Contact" }
+    ];
 
-      const sections = document.querySelectorAll("section");
-      let current = "home";
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 100;
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute("id");
-        }
-      });
-      setActiveSection(current);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navItems = [
-    { id: "hero", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },  
-    { id: "project", label: "Project" },
-    { id: "service", label: "Service" },
-    { id: "resume", label: "Resume" },
-    { id: "contact", label: "Contact" }
-
-  ];
-
-  return (
-    <nav
-      className={` nunito ${
-        scrolled ? "bg-black backdrop-blur-md fixed items-center w-full top-0 left-0 z-50 transition-all duration-300 shadow-lg border-gray-100" : "bg-[#0F0715] text-white"
-      }`}
-    >
-      <div className="lg:max-w-6xl max-md:px-6 lg:px-6 max-lg:max-w-2xl mx-auto py-5 flex justify-between items-center">
-        {/* Logo */}
-        <a
-          href="/"
-          className="text-4xl text-white font-bold satisfy-regular hover:scale-95 transition-transform  duration-300"
-        >
-          Zayd
-        </a>
-
-        {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center space-x-5">
-          {navItems.map((item) => (
-            <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                className={`transition-colors rounded-full barlow-regular px-5 py-2 font-semibold ${
-                  activeSection === item.id
-                    ? "text-white bg-[#8750F7] "
-                    : "text-white hover:bg-[#8750F7] transition duration-300"
+    return (
+        <nav
+            className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 border-b-[3px] border-black ${scrolled ? "bg-primary py-2 shadow-brutal" : "bg-white py-4"
                 }`}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-          {/* Get Started Button (desktop only) */}
-        <div className="hidden lg:inline hover:scale-95 transition-transform duration-300">
-          <a
-            href="/TazTahirResume.pdf"
-            download="TazTahirResume.pdf"
-            className="text-sm flex space-x-2 items-center barlow-regular shadow-white bg-[#8750F7] border-2 duration-300 transition hover:bg-white hover:text-black rounded-full border-[#8750F7] text-white px-7 py-3 font-semibold"
-          >
-            <span>Resume</span>
-            <Download size={13} className=""/>
-          </a>
-        </div>
-        </ul>
-
-        
-
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-white"
-          onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={30} /> : <Menu size={30} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="lg:hidden bg-[#1a1329] shadow-md h-screen">
-          <ul className="flex flex-col space-y-2 text-center px-6 py-4">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
-                  onClick={() => setIsOpen(false)}
-                  className={`block transition-colors px-3 py-3 rounded-full font-semibold ${
-                    activeSection === item.id
-                      ? "text-[#8750F7] border-2 w-40 mx-auto"
-                      : "text-white hover:text-[#8750F7]"
-                  }`}
+            <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                {/* Logo */}
+                <motion.a
+                    href="/"
+                    whileHover={{ scale: 1.1, rotate: -5 }}
+                    className="text-2xl sm:text-3xl font-black uppercase tracking-tighter bg-black text-white px-3 md:px-4 py-1 border-[3px] border-black shadow-[4px_4px_0px_0px_#FF006E]"
                 >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-            <li>
-              <a
-                href="./TazTahirResume.pdf"
-                download="TazTahirResume.pdf"
-                onClick={() => setIsOpen(false)}
-                className="block text-center w-fit rounded-full mx-auto bg-[#8750F7] text-white px-7 py-3 font-semibold"
-              >
-                Resume
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
-    </nav>
-  );
+                    ZAYD.DEV
+                </motion.a>
+
+                {/* Desktop Menu */}
+                <ul className="hidden lg:flex items-center space-x-2">
+                    {navItems.map((item) => (
+                        <li key={item.id}>
+                            <motion.a
+                                href={`#${item.id}`}
+                                whileHover={{ y: -2, x: -2, shadow: "4px 4px 0px 0px black" }}
+                                className={`px-4 py-2 font-bold uppercase border-[3px] transition-all ${activeSection === item.id
+                                        ? "bg-secondary text-white border-black shadow-brutal"
+                                        : "bg-white text-black border-transparent hover:border-black hover:shadow-brutal"
+                                    }`}
+                            >
+                                {item.label}
+                            </motion.a>
+                        </li>
+                    ))}
+                    <li>
+                        <motion.a
+                            href="/TazTahirResume.pdf"
+                            download
+                            whileHover={{ scale: 1.05, rotate: 2 }}
+                            className="flex items-center space-x-2 bg-accent px-6 py-2 border-[3px] border-black shadow-brutal font-black uppercase ml-4"
+                        >
+                            <span>Resume</span>
+                            <Download size={18} />
+                        </motion.a>
+                    </li>
+                </ul>
+
+                {/* Mobile Menu Button */}
+                <motion.button
+                    whileTap={{ scale: 0.9 }}
+                    className="lg:hidden p-2 bg-white border-[3px] border-black shadow-brutal"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    {isOpen ? <X size={30} /> : <Menu size={30} />}
+                </motion.button>
+            </div>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        className="lg:hidden absolute top-full left-0 w-full bg-white border-b-[3px] border-black p-6 shadow-brutal-lg"
+                    >
+                        <ul className="flex flex-col space-y-4">
+                            {navItems.map((item) => (
+                                <li key={item.id}>
+                                    <a
+                                        href={`#${item.id}`}
+                                        onClick={() => setIsOpen(false)}
+                                        className={`block p-4 border-[3px] border-black font-black uppercase text-center transition-all ${activeSection === item.id
+                                                ? "bg-primary shadow-brutal"
+                                                : "bg-white hover:bg-cyan-vivid hover:shadow-brutal"
+                                            }`}
+                                    >
+                                        {item.label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </nav>
+    );
 };
+
 
 export default Navbar;

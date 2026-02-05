@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './Header';
 import About from './About'
-import ResumeTimeline from './ResumeTimeline';
+import Projects from './Projects';
 import MyService from './MyService';
 import Skills from './Skills'
 import Work from './Work'
@@ -29,20 +29,20 @@ import Navbar from './Navbar';
 
 
 
-function App(){
-  return(
-      <div className='selection:bg-[#8750F7] sora selection:text-white'>
-        <Navbar/>
-        <Header/>
-        <About/>
-        <Skills/>
-        <ResumeTimeline/>
-        <MyService/>
-        <Work/>
-        <Contact/>
-        <Footer/>
-        <ScrollUpButton/>
-      </div>
+function App() {
+  return (
+    <div className='selection:bg-[#8750F7] sora selection:text-white'>
+      <Navbar />
+      <Header />
+      <About />
+      <Skills />
+      <Projects />
+      <MyService />
+      <Work />
+      <Contact />
+      <Footer />
+      <ScrollUpButton />
+    </div>
   )
 }
 export default App;
