@@ -100,7 +100,7 @@ const ContactSection = () => {
 
             <div className="grid grid-cols-1 gap-6">
               <InfoItem icon={Phone} label="Call Me" value="+234 906 0720 810" />
-              <InfoItem icon={Mail} label="Email Me" value="taz@zayd.dev" />
+              <InfoItem icon={Mail} label="Email Me" value="taztaz162004@gmail.com" />
               <InfoItem icon={MapPin} label="Location" value="Lagos, Nigeria" />
             </div>
 
@@ -111,7 +111,7 @@ const ContactSection = () => {
                   { icon: FaTwitter, url: "https://x.com/taz1393177", color: "bg-cyan-vivid" },
                   { icon: FaGithub, url: "https://github.com/Taztahir", color: "bg-white" },
                   { icon: FaWhatsapp, url: "https://wa.me/2349060720810", color: "bg-accent" },
-                  { icon: FaLinkedin, url: "#", color: "bg-primary" }
+                  { icon: FaLinkedin, url: "https://www.linkedin.com/in/zaid-tahir-1376073a8?utm_source=share_via&utm_content=profile&utm_medium=member_android", color: "bg-primary" }
                 ].map((social, i) => (
                   <motion.a
                     key={i}

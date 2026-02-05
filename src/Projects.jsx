@@ -4,7 +4,7 @@ import { ExternalLink, Github, Monitor, X, Minus, Square } from "lucide-react";
 import TymcampImage from "./assets/Tym-camp1.png";
 import TymcampImage2 from "./assets/Tym-camp2.png";
 import ClipfyImage1 from "./assets/Clipfy1.png";
-import ClipfyImage2 from "./assets/Runspadi.png";
+import SparkcodeImage from "./assets/Sparkcode.png";
 
 const WindowHeader = ({ title, color = "bg-black" }) => (
   <div className={`${color} p-2 border-b-[3px] border-black flex justify-between items-center`}>
@@ -32,7 +32,7 @@ const ProjectCard = ({ image, category, title, description, tags, links, color =
 
       <div className="p-4 flex-1 flex flex-col">
         <div className="border-[3px] border-black mb-4 overflow-hidden aspect-video bg-gray-100">
-          <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <img src={image} alt={title} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
         </div>
 
         <h3 className="text-3xl font-black uppercase mb-2 tracking-tighter">{title}</h3>
@@ -73,12 +73,12 @@ export default function RecentProjects() {
       color: "bg-secondary"
     },
     {
-      image: ClipfyImage2,
-      category: "Logistics",
-      title: "Runspadi",
-      description: "Complete logistics management system built for high-scale transport operations.",
-      tags: ["React", "Tailwind", "API Integration"],
-      links: "https://runspadi-ygam.vercel.app/",
+      image: SparkcodeImage,
+      category: "Web Platform",
+      title: "Sparkcode",
+      description: "A high-performance educational platform for modern developers. Clean architecture and seamless UX.",
+      tags: ["React", "Firebase", "Tailwind"],
+      links: "https://sparkcode-admin.vercel.app/",
       color: "bg-primary"
     },
   ];

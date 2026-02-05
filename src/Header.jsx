@@ -25,7 +25,7 @@ const FloatingShape = ({ color, size, top, left, delay, rotate }) => (
 export default function Header() {
   const socialLinks = [
     { icon: Twitter, url: "https://x.com/taz1393177", color: "bg-cyan-vivid" },
-    { icon: Linkedin, url: "https://linkedin.com/in/yourusername", color: "bg-primary" },
+    { icon: Linkedin, url: "https://www.linkedin.com/in/zaid-tahir-1376073a8?utm_source=share_via&utm_content=profile&utm_medium=member_android", color: "bg-primary" },
     { icon: Github, url: "https://github.com/Taztahir", color: "bg-accent" },
     { icon: FaWhatsapp, url: "https://wa.me/2349060720810", color: "bg-secondary" },
   ];
