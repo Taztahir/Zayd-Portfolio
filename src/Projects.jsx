@@ -5,8 +5,8 @@ import TymcampImage from "./assets/Tym-camp1.png";
 import AdavestudioImage from "./assets/AdaveStudio.png";
 import ClipfyImage1 from "./assets/Clipfy1.png";
 import SparkcodeImage from "./assets/Sparkcode.png";
-import FootflexImage from "./assets/Footflex.png";
-import TechondemandImage from "./assets/Techondemand.png";
+import FootflexImage from "./assets/FootFlex.png";
+import TechondemandImage from "./assets/TechOnDemand.png";
 
 const WindowHeader = ({ title, color = "bg-black" }) => (
   <div className={`${color} p-2 border-b-[3px] border-black flex justify-between items-center`}>
