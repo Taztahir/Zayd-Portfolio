@@ -59,7 +59,7 @@ export default function Header() {
             Full Stack Developer & Tutor
           </motion.div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-8xl font-black uppercase leading-none mb-8 break-words">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase leading-none mb-8 break-words">
             I BUILD <br />
             <span className="text-white bg-black px-2 md:px-4 shadow-[5px_5px_0px_0px_#FF006E] md:shadow-[8px_8px_0px_0px_#FF006E]">CRAZY</span> <br />
             <span className="text-secondary">INTERFACES</span>

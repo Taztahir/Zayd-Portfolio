@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 const statsData = [
   { icon: <Trophy size={40} className="text-[#8750F7]" />, value: 100, suffix: "%", label: "Job achievements" },
   { icon: <Briefcase size={40} className="text-[#8750F7]" />, value: 2, suffix: "+", label: "Years of Experience" },
-  { icon: <Grid size={40} className="text-[#8750F7]" />, value: 50, suffix: "+", label: "Happy Clients" },
+  { icon: <Grid size={40} className="text-[#8750F7]" />, value: 100, suffix: "+", label: "Happy Clients" },
   { icon: <Crown size={40} className="text-[#8750F7]" />, value: 50, suffix: "+", label: "Project Completed" },
 ];
 

@@ -2,18 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "HTML", color: "bg-primary", icon: "https://cdn.simpleicons.org/html5/000000" },
-  { name: "TailwindCSS", color: "bg-cyan-vivid", icon: "https://cdn.simpleicons.org/tailwindcss/000000" },
-  { name: "CSS", color: "bg-secondary", icon: "https://cdn.simpleicons.org/css3/000000" },
-  { name: "JavaScript", color: "bg-accent", icon: "https://cdn.simpleicons.org/javascript/000000" },
-  { name: "React", color: "bg-primary", icon: "https://cdn.simpleicons.org/react/000000" },
-  { name: "Django", color: "bg-secondary", icon: "https://cdn.simpleicons.org/django/000000" },
-  { name: "Python", color: "bg-accent", icon: "https://cdn.simpleicons.org/python/000000" },
-  { name: "TypeScript", color: "bg-cyan-vivid", icon: "https://cdn.simpleicons.org/typescript/000000" },
-  { name: "NodeJs", color: "bg-primary", icon: "https://cdn.simpleicons.org/node.js/000000" },
-  { name: "Firebase", color: "bg-secondary", icon: "https://cdn.simpleicons.org/firebase/000000" },
-  { name: "Github", color: "bg-accent", icon: "https://cdn.simpleicons.org/github/000000" },
-  { name: "Vercel", color: "bg-cyan-vivid", icon: "https://cdn.simpleicons.org/vercel/000000" },
+  { name: "HTML", color: "bg-primary", icon: "https://cdn.simpleicons.org/html5" },
+  { name: "TailwindCSS", color: "bg-cyan-vivid", icon: "https://cdn.simpleicons.org/tailwindcss" },
+  { name: "CSS", color: "bg-secondary", icon: "https://cdn.simpleicons.org/css3" },
+  { name: "JavaScript", color: "bg-accent", icon: "https://cdn.simpleicons.org/javascript" },
+  { name: "React", color: "bg-primary", icon: "https://cdn.simpleicons.org/react" },
+  { name: "Django", color: "bg-secondary", icon: "https://cdn.simpleicons.org/django" },
+  { name: "Python", color: "bg-accent", icon: "https://cdn.simpleicons.org/python" },
+  { name: "TypeScript", color: "bg-cyan-vivid", icon: "https://cdn.simpleicons.org/typescript" },
+  { name: "NodeJs", color: "bg-primary", icon: "https://cdn.simpleicons.org/node.js" },
+  { name: "Firebase", color: "bg-secondary", icon: "https://cdn.simpleicons.org/firebase" },
+  { name: "Github", color: "bg-accent", icon: "https://cdn.simpleicons.org/github" },
+  { name: "Vercel", color: "bg-cyan-vivid", icon: "https://cdn.simpleicons.org/vercel" },
 ];
 
 const SkillSticker = ({ skill, index }) => (
@@ -24,7 +24,7 @@ const SkillSticker = ({ skill, index }) => (
     whileHover={{ scale: 1.1, rotate: 0, zIndex: 10 }}
     className={`p-6 border-[3px] border-black shadow-brutal flex flex-col items-center justify-center gap-4 ${skill.color} cursor-pointer transition-shadow hover:shadow-brutal-lg`}
   >
-    <img src={skill.icon} alt={skill.name} className="w-16 h-16 object-contain grayscale brightness-0" />
+    <img src={skill.icon} alt={skill.name} className="w-16 h-16 object-contain" />
     <span className="font-black uppercase text-lg">{skill.name}</span>
   </motion.div>
 );
@@ -67,7 +67,7 @@ const SkillsSection = () => {
           >
             {[...skills, ...skills].map((s, i) => (
               <div key={i} className="flex items-center gap-4 px-8 py-4 border-[3px] border-black bg-primary font-black uppercase text-2xl shadow-brutal">
-                <img src={s.icon} className="w-8 h-8 grayscale brightness-0" alt="" />
+                <img src={s.icon} className="w-8 h-8" alt="" />
                 {s.name}
               </div>
             ))}

@@ -2,9 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Monitor, X, Minus, Square } from "lucide-react";
 import TymcampImage from "./assets/Tym-camp1.png";
-import TymcampImage2 from "./assets/Tym-camp2.png";
+import AdavestudioImage from "./assets/AdaveStudio.png";
 import ClipfyImage1 from "./assets/Clipfy1.png";
 import SparkcodeImage from "./assets/Sparkcode.png";
+import FootflexImage from "./assets/Footflex.png";
+import TechondemandImage from "./assets/Techondemand.png";
 
 const WindowHeader = ({ title, color = "bg-black" }) => (
   <div className={`${color} p-2 border-b-[3px] border-black flex justify-between items-center`}>
@@ -64,6 +66,24 @@ const ProjectCard = ({ image, category, title, description, tags, links, color =
 export default function RecentProjects() {
   const projects = [
     {
+      image: TechondemandImage,
+      category: "IT Solutions",
+      title: "Tech on demand",
+      description: "A forward-thinking IT and Software solutions provider, empowering businesses with scalable and secure systems.",
+      tags: ["IT Services", "Software Solutions", "Web Dev"],
+      links: "https://techondemandltd.com/",
+      color: "bg-cyan-vivid"
+    },
+    {
+      image: FootflexImage,
+      category: "E-Commerce",
+      title: "Footflexng",
+      description: "Premium footwear e-commerce platform focusing on quality and accessibility in the Nigerian market.",
+      tags: ["React", "E-commerce", "Fashion"],
+      links: "https://footflexng.com/",
+      color: "bg-accent"
+    },
+    {
       image: ClipfyImage1,
       category: "SaaS App",
       title: "Clipfy",
@@ -113,21 +133,20 @@ export default function RecentProjects() {
           viewport={{ once: true }}
         >
           <div className="lg:w-1/2 border-b-[4px] lg:border-b-0 lg:border-r-[4px] border-black bg-cyan-vivid p-6 md:p-8 flex flex-col justify-center">
-            <div className="inline-block bg-black text-white px-4 py-1 font-black uppercase mb-4 w-fit text-sm">Featured NGOs</div>
-            <h3 className="text-3xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6">TYM CAMP <br /> PLATFORM</h3>
+            <div className="inline-block bg-black text-white px-4 py-1 font-black uppercase mb-4 w-fit text-sm">WEB SOLUTIONS</div>
+            <h3 className="text-3xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6">ADAVE <br /> STUDIO</h3>
             <p className="text-lg md:text-2xl font-bold mb-8 leading-snug">
-              Achieving marketing targets through precision and high-impact design.
-              A website that doesn't just look good—it performs.
+              A forward-thinking IT and Software solutions provider, empowering businesses with scalable and secure systems.
             </p>
 
             <div className="flex flex-wrap gap-2 mb-8">
-              {["React", "TypeScript", "PayStack", "Firebase"].map(tag => (
+              {["React", "TypeScript", "TailwindCSS"].map(tag => (
                 <span key={tag} className="bg-white border-[2px] border-black px-4 py-1 font-black uppercase text-xs md:text-sm">{tag}</span>
               ))}
             </div>
 
             <div className="flex gap-4">
-              <a href="https://tym-camp-platform.vercel.app/" target="_blank" className="brutal-btn bg-black text-white flex items-center gap-2 text-sm md:text-base">
+              <a href="https://adave-studio.vercel.app/" target="_blank" className="brutal-btn bg-black text-white flex items-center gap-2 text-sm md:text-base">
                 Live Demo <ExternalLink size={20} />
               </a>
               <div className="bg-white border-[3px] border-black p-3 md:p-4 shadow-brutal flex items-center justify-center">
@@ -138,7 +157,7 @@ export default function RecentProjects() {
 
           <div className="lg:w-1/2 bg-gray-100 p-4 relative group overflow-hidden min-h-[250px] md:min-h-0">
             <motion.img
-              src={TymcampImage2}
+              src={AdavestudioImage}
               alt="Project"
               className="w-full h-full object-cover border-[3px] border-black shadow-brutal group-hover:scale-110 transition-transform duration-700"
             />

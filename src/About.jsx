@@ -6,8 +6,8 @@ import AboutImage from "./assets/about-1.png";
 const statsData = [
   { icon: <Trophy size={40} />, value: 100, suffix: "%", label: "Achievements", color: "bg-primary" },
   { icon: <Briefcase size={40} />, value: 2, suffix: "+", label: "Experience", color: "bg-secondary" },
-  { icon: <Grid size={40} />, value: 50, suffix: "+", label: "Clients", color: "bg-accent" },
-  { icon: <Crown size={40} />, value: 50, suffix: "+", label: "Projects", color: "bg-cyan-vivid" },
+  { icon: <Grid size={40} />, value: 100, suffix: "+", label: "Clients", color: "bg-accent" },
+  { icon: <Crown size={40} />, value: 100, suffix: "+", label: "Projects", color: "bg-cyan-vivid" },
 ];
 
 const Counter = ({ value, suffix, inView }) => {
