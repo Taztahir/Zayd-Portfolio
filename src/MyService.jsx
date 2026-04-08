@@ -9,7 +9,7 @@ export default function Specialization() {
       icon: <Code2 size={48} />,
       title: "Web Development",
       desc: "Building modern, scalable, and user-friendly full stack solutions that burn down the boring.",
-      projects: "15+ PROJECTS",
+      projects: "100+ PROJECTS",
       color: "bg-primary"
     },
     {
@@ -17,7 +17,7 @@ export default function Specialization() {
       icon: <Smartphone size={48} />,
       title: "Mobile Apps",
       desc: "Transforming clashing ideas into interactive, high-performance digital experiences.",
-      projects: "8+ PROJECTS",
+      projects: "5+ PROJECTS",
       color: "bg-secondary"
     },
     {
