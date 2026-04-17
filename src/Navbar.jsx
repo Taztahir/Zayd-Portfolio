@@ -57,8 +57,8 @@ const Navbar = () => {
                                 href={`#${item.id}`}
                                 whileHover={{ y: -2, x: -2, shadow: "4px 4px 0px 0px black" }}
                                 className={`px-4 py-2 font-bold uppercase border-[3px] transition-all ${activeSection === item.id
-                                        ? "bg-secondary text-white border-black shadow-brutal"
-                                        : "bg-white text-black border-transparent hover:border-black hover:shadow-brutal"
+                                    ? "bg-secondary text-white border-black shadow-brutal"
+                                    : "bg-white text-black border-transparent hover:border-black hover:shadow-brutal"
                                     }`}
                             >
                                 {item.label}
@@ -67,7 +67,7 @@ const Navbar = () => {
                     ))}
                     <li>
                         <motion.a
-                            href="/TazTahirResume.pdf"
+                            href="/ZaydTahir.pdf"
                             download
                             whileHover={{ scale: 1.05, rotate: 2 }}
                             className="flex items-center space-x-2 bg-accent px-6 py-2 border-[3px] border-black shadow-brutal font-black uppercase ml-4"
@@ -104,8 +104,8 @@ const Navbar = () => {
                                         href={`#${item.id}`}
                                         onClick={() => setIsOpen(false)}
                                         className={`block p-4 border-[3px] border-black font-black uppercase text-center transition-all ${activeSection === item.id
-                                                ? "bg-primary shadow-brutal"
-                                                : "bg-white hover:bg-cyan-vivid hover:shadow-brutal"
+                                            ? "bg-primary shadow-brutal"
+                                            : "bg-white hover:bg-cyan-vivid hover:shadow-brutal"
                                             }`}
                                     >
                                         {item.label}
