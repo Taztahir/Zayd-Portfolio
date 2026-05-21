@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Monitor, X, Minus, Square } from "lucide-react";
-import TymcampImage from "./assets/Tym-camp1.png";
-import AdavestudioImage from "./assets/AdaveStudio.png";
+import CeddrInfa from "./assets/CeddrImage.png";
+// import AdavestudioImage from "./assets/AdaveStudio.png";
 import ClipfyImage1 from "./assets/Clipfy1.png";
 import SparkcodeImage from "./assets/Sparkcode.png";
 import FootflexImage from "./assets/FootFlex.png";
@@ -134,7 +134,7 @@ export default function RecentProjects() {
         >
           <div className="lg:w-1/2 border-b-[4px] lg:border-b-0 lg:border-r-[4px] border-black bg-cyan-vivid p-6 md:p-8 flex flex-col justify-center">
             <div className="inline-block bg-black text-white px-4 py-1 font-black uppercase mb-4 w-fit text-sm">WEB SOLUTIONS</div>
-            <h3 className="text-3xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6">ADAVE <br /> STUDIO</h3>
+            <h3 className="text-3xl sm:text-5xl font-black uppercase tracking-tighter mb-6">CEDDR <br /> INFRASTRUCTURE</h3>
             <p className="text-lg md:text-2xl font-bold mb-8 leading-snug">
               A forward-thinking IT and Software solutions provider, empowering businesses with scalable and secure systems.
             </p>
@@ -146,20 +146,22 @@ export default function RecentProjects() {
             </div>
 
             <div className="flex gap-4">
-              <a href="https://adave-studio.vercel.app/" target="_blank" className="brutal-btn bg-black text-white flex items-center gap-2 text-sm md:text-base">
+              <a href="https://ceddrinfra.com/" target="_blank" className="brutal-btn bg-black text-white flex items-center gap-2 text-sm md:text-base">
                 Live Demo <ExternalLink size={20} />
               </a>
               <div className="bg-white border-[3px] border-black p-3 md:p-4 shadow-brutal flex items-center justify-center">
-                <Github size={24} />
+                <a href="https://github.com/Taztahir" target="_blank">
+                  <Github size={24} />
+                </a>
               </div>
             </div>
           </div>
 
           <div className="lg:w-1/2 bg-gray-100 p-4 relative group overflow-hidden min-h-[250px] md:min-h-0">
             <motion.img
-              src={AdavestudioImage}
+              src={CeddrInfa}
               alt="Project"
-              className="w-full h-full object-cover border-[3px] border-black shadow-brutal group-hover:scale-110 transition-transform duration-700"
+              className="w-full h-[700px] object-cover object-top border-[3px] border-black shadow-brutal group-hover:scale-110 transition-transform duration-700"
             />
             <div className="absolute top-4 left-4 md:top-10 md:left-10 bg-accent p-2 md:p-4 border-[3px] border-black shadow-brutal font-black uppercase rotate-[-10deg] z-20 text-xs md:text-base">
               100% Impact
